@@ -1,0 +1,9 @@
+/gps/particle neutron
+/gps/number 1
+/gps/pos/centre 0.0 0.0 0.0
+/gps/direction 0.0 0.0 1.0
+/gps/energy 10 MeV
+
+# Number of events
+/run/beamOn 100
+

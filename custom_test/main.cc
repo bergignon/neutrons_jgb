@@ -25,10 +25,11 @@ int main(int argc, char** argv)
 
     G4UImanager* UIManager = G4UImanager::GetUIpointer();
 
-    UIManager->ApplyCommand("/vis/open OGL");
-    UIManager->ApplyCommand("/vis/drawVolume");
-    UIManager->ApplyCommand("/vis/scene/add/trajectories smooth");
-    UIManager->ApplyCommand("/vis/viewer/set/autoRefresh true");
+    UIManager->ApplyCommand("/control/execute vis.mac");
+    //UIManager->ApplyCommand("/vis/open OGL");
+    //UIManager->ApplyCommand("/vis/drawVolume");
+    //UIManager->ApplyCommand("/vis/scene/add/trajectories smooth");
+    //UIManager->ApplyCommand("/vis/viewer/set/autoRefresh true");
 
 
     ui->SessionStart();
