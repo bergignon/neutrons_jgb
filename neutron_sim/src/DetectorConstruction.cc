@@ -29,7 +29,7 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
   // à tout ce qu'on voudrait ajouter par la suite !
 
   // Géométrie de l'objet : Définition purement géométrique de l'objet qu'on veut simuler (cubique ici)
-  solidWorld_ = new G4Box("solidWorld", WORLD_RADIUS, WORLD_RADIUS, WORLD_RADIUS);
+  solidWorld_ = new G4Box("solidWorld", WORLD_RADIUS/3, WORLD_RADIUS/2, WORLD_RADIUS);
 
   // Volume Logique :  On associe le matériau à la géométrie et on lui ajoute des propriétés
   logicalWorld_= new G4LogicalVolume(solidWorld_,
@@ -54,7 +54,13 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                                        targetMaterial_,
                                        "logicalTarget");
 
-  physicalTarget_ = new G4PVPlacement(0,                                    // Rotation
+  G4RotationMatrix* rotation = new G4RotationMatrix();
+
+  rotation->rotateX(90*deg);
+  rotation->rotateY(0*deg);
+  rotation->rotateZ(0*deg);
+
+  physicalTarget_ = new G4PVPlacement(rotation,                                    // Rotation
                                     G4ThreeVector(0.,0.,TARGET_POS_SHIFT),  // Coordinate
                                     logicalTarget_,                         // Logical volume
                                     "physicalTarget",                       // Name
@@ -67,6 +73,3 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
 
   return physicalWorld_;
 }
-
-
-

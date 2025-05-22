@@ -1,0 +1,2 @@
+set(__QT_DEPLOY_TARGET_neutron_sim_FILE /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/neutron_sim)
+set(__QT_DEPLOY_TARGET_neutron_sim_TYPE EXECUTABLE)

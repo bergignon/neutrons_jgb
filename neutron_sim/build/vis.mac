@@ -1,15 +1,15 @@
-# Macro file for the visualization setting for the initialization phase 
+# Macro file for the visualization setting for the initialization phase
 # of the B2 example when running in interactive mode
 #
 
 # Use these open statements to open selected visualization
 #
 # Use this open statement to create an OpenGL view:
-/vis/open OGL 600x600-0+0
+/vis/open VTK
 #
 # Use this open statement to create an OpenInventor view:
 #/vis/open OIX
-#
+
 # Use this open statement to create a .prim file suitable for
 # viewing in DAWN:
 #/vis/open DAWNFILE

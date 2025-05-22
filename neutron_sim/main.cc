@@ -39,19 +39,19 @@ int main(int argc, char** argv)
   runManager->SetUserInitialization(new ActionInitialization());
   runManager->Initialize();
 
-  //G4VisManager* visManager = new G4VisExecutive();
-  //visManager->Initialize();
+  G4VisManager* visManager = new G4VisExecutive();
+  visManager->Initialize();
 
   G4UImanager* UIManager = G4UImanager::GetUIpointer();
-  //UIManager->ApplyCommand("/control/execute vis.mac");
+  UIManager->ApplyCommand("/control/execute vis.mac");
   UIManager->ApplyCommand("/control/execute run.mac");
 
-  //G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+  G4UIExecutive* ui = new G4UIExecutive(argc, argv);
 
-  //ui->SessionStart();
+  ui->SessionStart();
 
-  //delete ui;
-  //delete visManager;
+  delete ui;
+  delete visManager;
   delete runManager;
   return 0;
 }
