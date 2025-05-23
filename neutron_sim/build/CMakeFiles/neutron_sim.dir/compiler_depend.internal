@@ -944,6 +944,8 @@ CMakeFiles/neutron_sim.dir/main.cc.o
  /usr/local/include/Geant4/G4BinScheme.hh
  /usr/local/include/Geant4/G4BlockingList.hh
  /usr/local/include/Geant4/G4BlockingList.icc
+ /usr/local/include/Geant4/G4BooleanSolid.hh
+ /usr/local/include/Geant4/G4BooleanSolid.icc
  /usr/local/include/Geant4/G4Box.hh
  /usr/local/include/Geant4/G4Box.icc
  /usr/local/include/Geant4/G4CSGSolid.hh
@@ -962,6 +964,7 @@ CMakeFiles/neutron_sim.dir/main.cc.o
  /usr/local/include/Geant4/G4DataVector.icc
  /usr/local/include/Geant4/G4DensityEffectCalculator.hh
  /usr/local/include/Geant4/G4DigiFilterFactories.hh
+ /usr/local/include/Geant4/G4DisplacedSolid.hh
  /usr/local/include/Geant4/G4DynamicParticle.hh
  /usr/local/include/Geant4/G4DynamicParticle.icc
  /usr/local/include/Geant4/G4ElectronOccupancy.hh
@@ -1141,6 +1144,7 @@ CMakeFiles/neutron_sim.dir/main.cc.o
  /usr/local/include/Geant4/G4String.icc
  /usr/local/include/Geant4/G4SubEvent.hh
  /usr/local/include/Geant4/G4SubEventTrackStack.hh
+ /usr/local/include/Geant4/G4SubtractionSolid.hh
  /usr/local/include/Geant4/G4SurfBits.hh
  /usr/local/include/Geant4/G4SystemOfUnits.hh
  /usr/local/include/Geant4/G4TH1ToolsManager.hh
@@ -1207,6 +1211,7 @@ CMakeFiles/neutron_sim.dir/main.cc.o
  /usr/local/include/Geant4/G4VAccumulable.icc
  /usr/local/include/Geant4/G4VAnalysisManager.hh
  /usr/local/include/Geant4/G4VAnalysisManager.icc
+ /usr/local/include/Geant4/G4VBooleanProcessor.hh
  /usr/local/include/Geant4/G4VCSGface.hh
  /usr/local/include/Geant4/G4VCSGfaceted.hh
  /usr/local/include/Geant4/G4VDigi.hh
@@ -3251,6 +3256,8 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o
  /usr/local/include/Geant4/G4AllocatorPool.hh
  /usr/local/include/Geant4/G4ApplicationState.hh
  /usr/local/include/Geant4/G4AutoLock.hh
+ /usr/local/include/Geant4/G4BooleanSolid.hh
+ /usr/local/include/Geant4/G4BooleanSolid.icc
  /usr/local/include/Geant4/G4Box.hh
  /usr/local/include/Geant4/G4Box.icc
  /usr/local/include/Geant4/G4CSGSolid.hh
@@ -3258,6 +3265,7 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o
  /usr/local/include/Geant4/G4DataVector.hh
  /usr/local/include/Geant4/G4DataVector.icc
  /usr/local/include/Geant4/G4DensityEffectCalculator.hh
+ /usr/local/include/Geant4/G4DisplacedSolid.hh
  /usr/local/include/Geant4/G4DynamicParticle.hh
  /usr/local/include/Geant4/G4DynamicParticle.icc
  /usr/local/include/Geant4/G4ElectronOccupancy.hh
@@ -3331,6 +3339,7 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o
  /usr/local/include/Geant4/G4SteppingControl.hh
  /usr/local/include/Geant4/G4String.hh
  /usr/local/include/Geant4/G4String.icc
+ /usr/local/include/Geant4/G4SubtractionSolid.hh
  /usr/local/include/Geant4/G4SystemOfUnits.hh
  /usr/local/include/Geant4/G4Threading.hh
  /usr/local/include/Geant4/G4ThreeVector.hh
@@ -3350,6 +3359,7 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o
  /usr/local/include/Geant4/G4UIdirectory.hh
  /usr/local/include/Geant4/G4UImessenger.hh
  /usr/local/include/Geant4/G4UIparameter.hh
+ /usr/local/include/Geant4/G4VBooleanProcessor.hh
  /usr/local/include/Geant4/G4VHit.hh
  /usr/local/include/Geant4/G4VHitsCollection.hh
  /usr/local/include/Geant4/G4VPhysicalVolume.hh
@@ -8768,6 +8778,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o
  /usr/local/include/Geant4/G4AuxiliaryNavServices.icc
  /usr/local/include/Geant4/G4BlockingList.hh
  /usr/local/include/Geant4/G4BlockingList.icc
+ /usr/local/include/Geant4/G4BooleanSolid.hh
+ /usr/local/include/Geant4/G4BooleanSolid.icc
  /usr/local/include/Geant4/G4Box.hh
  /usr/local/include/Geant4/G4Box.icc
  /usr/local/include/Geant4/G4CSGSolid.hh
@@ -8777,6 +8789,7 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o
  /usr/local/include/Geant4/G4DataVector.hh
  /usr/local/include/Geant4/G4DataVector.icc
  /usr/local/include/Geant4/G4DensityEffectCalculator.hh
+ /usr/local/include/Geant4/G4DisplacedSolid.hh
  /usr/local/include/Geant4/G4DynamicParticle.hh
  /usr/local/include/Geant4/G4DynamicParticle.icc
  /usr/local/include/Geant4/G4ElectronOccupancy.hh
@@ -8894,6 +8907,7 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o
  /usr/local/include/Geant4/G4String.icc
  /usr/local/include/Geant4/G4SubEvent.hh
  /usr/local/include/Geant4/G4SubEventTrackStack.hh
+ /usr/local/include/Geant4/G4SubtractionSolid.hh
  /usr/local/include/Geant4/G4SystemOfUnits.hh
  /usr/local/include/Geant4/G4Threading.hh
  /usr/local/include/Geant4/G4ThreeVector.hh
@@ -8921,6 +8935,7 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o
  /usr/local/include/Geant4/G4UserStackingAction.hh
  /usr/local/include/Geant4/G4UserSteppingAction.hh
  /usr/local/include/Geant4/G4UserTrackingAction.hh
+ /usr/local/include/Geant4/G4VBooleanProcessor.hh
  /usr/local/include/Geant4/G4VDigiCollection.hh
  /usr/local/include/Geant4/G4VExternalNavigation.hh
  /usr/local/include/Geant4/G4VHit.hh

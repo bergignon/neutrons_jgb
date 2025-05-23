@@ -2,10 +2,10 @@
 #include "G4tgbVolumeMgr.hh"
 
 
-const G4double WORLD_RADIUS  = 3.0*m;
+const G4double WORLD_RADIUS  = 1.2*m;
 const G4double TARGET_RADIUS = 2.54*cm;
 const G4double TARGET_HEIGHT = 5.08*cm;
-const G4double TARGET_POS_SHIFT = 202.54*cm;
+const G4double TARGET_POS_SHIFT = 101.27*cm;
 
 DetectorConstruction::DetectorConstruction() {}
 
@@ -18,6 +18,7 @@ void DetectorConstruction::defineMaterials()
 
   worldMaterial_ = manager->FindOrBuildMaterial("G4_Galactic");
   targetMaterial_= manager->FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
+  casingMaterial_ = manager->FindOrBuildMaterial("G4_Al");
 }
 
 
@@ -69,6 +70,23 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                                     0,                                      // Copy number
                                     true);                                  // Overlaps checking
 
+  solidCasing_ = new G4Tubs("solidCasing", 0.*cm, TARGET_RADIUS + 2.*mm,
+      TARGET_HEIGHT + 2.*mm, 0*deg, 360.*deg);
+
+  hollowCasing_ = new G4SubtractionSolid("hollowCasing", solidCasing_, solidTarget_);
+
+  logicalCasing_ = new G4LogicalVolume(hollowCasing_,
+                                        casingMaterial_,
+                                        "logicalCasing");
+
+  physicalCasing_ = new G4PVPlacement(rotation,                                    // Rotation
+                                     G4ThreeVector(0.,0.,TARGET_POS_SHIFT),  // Coordinate
+                                     logicalCasing_,                         // Logical volume
+                                     "physicalCasing",                       // Name
+                                     logicalWorld_,                          // Mother volume
+                                     false,                                  // No boolean operation
+                                     0,                                      // Copy number
+                                     true);                                  // Overlaps checking
   scoringVolume_ = logicalTarget_;
 
   return physicalWorld_;

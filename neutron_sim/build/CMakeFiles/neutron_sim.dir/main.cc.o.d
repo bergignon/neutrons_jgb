@@ -1219,6 +1219,11 @@ CMakeFiles/neutron_sim.dir/main.cc.o: \
   /usr/local/include/Geant4/G4SystemOfUnits.hh \
   /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
   /usr/local/include/Geant4/G4tgrMessenger.hh \
+  /usr/local/include/Geant4/G4SubtractionSolid.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.hh \
+  /usr/local/include/Geant4/G4DisplacedSolid.hh \
+  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.icc \
   /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/include/PhysicsList.hh \
   /usr/local/include/Geant4/G4VModularPhysicsList.hh \
   /usr/local/include/Geant4/G4VPhysicsConstructor.hh \

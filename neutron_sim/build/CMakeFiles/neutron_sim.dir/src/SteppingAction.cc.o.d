@@ -996,6 +996,11 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: \
   /usr/local/include/Geant4/G4UIcommand.hh \
   /usr/local/include/Geant4/G4ApplicationState.hh \
   /usr/local/include/Geant4/G4UIparameter.hh \
+  /usr/local/include/Geant4/G4SubtractionSolid.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.hh \
+  /usr/local/include/Geant4/G4DisplacedSolid.hh \
+  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.icc \
   /usr/local/include/Geant4/G4Event.hh \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
   /usr/local/include/Geant4/evtdefs.hh \

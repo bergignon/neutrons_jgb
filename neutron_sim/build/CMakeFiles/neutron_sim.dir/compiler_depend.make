@@ -943,6 +943,8 @@ CMakeFiles/neutron_sim.dir/main.cc.o: /Users/jeangabrielbergeron/Documents/log/I
   /usr/local/include/Geant4/G4BinScheme.hh \
   /usr/local/include/Geant4/G4BlockingList.hh \
   /usr/local/include/Geant4/G4BlockingList.icc \
+  /usr/local/include/Geant4/G4BooleanSolid.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.icc \
   /usr/local/include/Geant4/G4Box.hh \
   /usr/local/include/Geant4/G4Box.icc \
   /usr/local/include/Geant4/G4CSGSolid.hh \
@@ -961,6 +963,7 @@ CMakeFiles/neutron_sim.dir/main.cc.o: /Users/jeangabrielbergeron/Documents/log/I
   /usr/local/include/Geant4/G4DataVector.icc \
   /usr/local/include/Geant4/G4DensityEffectCalculator.hh \
   /usr/local/include/Geant4/G4DigiFilterFactories.hh \
+  /usr/local/include/Geant4/G4DisplacedSolid.hh \
   /usr/local/include/Geant4/G4DynamicParticle.hh \
   /usr/local/include/Geant4/G4DynamicParticle.icc \
   /usr/local/include/Geant4/G4ElectronOccupancy.hh \
@@ -1140,6 +1143,7 @@ CMakeFiles/neutron_sim.dir/main.cc.o: /Users/jeangabrielbergeron/Documents/log/I
   /usr/local/include/Geant4/G4String.icc \
   /usr/local/include/Geant4/G4SubEvent.hh \
   /usr/local/include/Geant4/G4SubEventTrackStack.hh \
+  /usr/local/include/Geant4/G4SubtractionSolid.hh \
   /usr/local/include/Geant4/G4SurfBits.hh \
   /usr/local/include/Geant4/G4SystemOfUnits.hh \
   /usr/local/include/Geant4/G4TH1ToolsManager.hh \
@@ -1206,6 +1210,7 @@ CMakeFiles/neutron_sim.dir/main.cc.o: /Users/jeangabrielbergeron/Documents/log/I
   /usr/local/include/Geant4/G4VAccumulable.icc \
   /usr/local/include/Geant4/G4VAnalysisManager.hh \
   /usr/local/include/Geant4/G4VAnalysisManager.icc \
+  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
   /usr/local/include/Geant4/G4VCSGface.hh \
   /usr/local/include/Geant4/G4VCSGfaceted.hh \
   /usr/local/include/Geant4/G4VDigi.hh \
@@ -3248,6 +3253,8 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o: /Users/jeangabrielberg
   /usr/local/include/Geant4/G4AllocatorPool.hh \
   /usr/local/include/Geant4/G4ApplicationState.hh \
   /usr/local/include/Geant4/G4AutoLock.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.icc \
   /usr/local/include/Geant4/G4Box.hh \
   /usr/local/include/Geant4/G4Box.icc \
   /usr/local/include/Geant4/G4CSGSolid.hh \
@@ -3255,6 +3262,7 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o: /Users/jeangabrielberg
   /usr/local/include/Geant4/G4DataVector.hh \
   /usr/local/include/Geant4/G4DataVector.icc \
   /usr/local/include/Geant4/G4DensityEffectCalculator.hh \
+  /usr/local/include/Geant4/G4DisplacedSolid.hh \
   /usr/local/include/Geant4/G4DynamicParticle.hh \
   /usr/local/include/Geant4/G4DynamicParticle.icc \
   /usr/local/include/Geant4/G4ElectronOccupancy.hh \
@@ -3328,6 +3336,7 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o: /Users/jeangabrielberg
   /usr/local/include/Geant4/G4SteppingControl.hh \
   /usr/local/include/Geant4/G4String.hh \
   /usr/local/include/Geant4/G4String.icc \
+  /usr/local/include/Geant4/G4SubtractionSolid.hh \
   /usr/local/include/Geant4/G4SystemOfUnits.hh \
   /usr/local/include/Geant4/G4Threading.hh \
   /usr/local/include/Geant4/G4ThreeVector.hh \
@@ -3347,6 +3356,7 @@ CMakeFiles/neutron_sim.dir/src/DetectorConstruction.cc.o: /Users/jeangabrielberg
   /usr/local/include/Geant4/G4UIdirectory.hh \
   /usr/local/include/Geant4/G4UImessenger.hh \
   /usr/local/include/Geant4/G4UIparameter.hh \
+  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
   /usr/local/include/Geant4/G4VHit.hh \
   /usr/local/include/Geant4/G4VHitsCollection.hh \
   /usr/local/include/Geant4/G4VPhysicalVolume.hh \
@@ -8760,6 +8770,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
   /usr/local/include/Geant4/G4AuxiliaryNavServices.icc \
   /usr/local/include/Geant4/G4BlockingList.hh \
   /usr/local/include/Geant4/G4BlockingList.icc \
+  /usr/local/include/Geant4/G4BooleanSolid.hh \
+  /usr/local/include/Geant4/G4BooleanSolid.icc \
   /usr/local/include/Geant4/G4Box.hh \
   /usr/local/include/Geant4/G4Box.icc \
   /usr/local/include/Geant4/G4CSGSolid.hh \
@@ -8769,6 +8781,7 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
   /usr/local/include/Geant4/G4DataVector.hh \
   /usr/local/include/Geant4/G4DataVector.icc \
   /usr/local/include/Geant4/G4DensityEffectCalculator.hh \
+  /usr/local/include/Geant4/G4DisplacedSolid.hh \
   /usr/local/include/Geant4/G4DynamicParticle.hh \
   /usr/local/include/Geant4/G4DynamicParticle.icc \
   /usr/local/include/Geant4/G4ElectronOccupancy.hh \
@@ -8886,6 +8899,7 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
   /usr/local/include/Geant4/G4String.icc \
   /usr/local/include/Geant4/G4SubEvent.hh \
   /usr/local/include/Geant4/G4SubEventTrackStack.hh \
+  /usr/local/include/Geant4/G4SubtractionSolid.hh \
   /usr/local/include/Geant4/G4SystemOfUnits.hh \
   /usr/local/include/Geant4/G4Threading.hh \
   /usr/local/include/Geant4/G4ThreeVector.hh \
@@ -8913,6 +8927,7 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
   /usr/local/include/Geant4/G4UserStackingAction.hh \
   /usr/local/include/Geant4/G4UserSteppingAction.hh \
   /usr/local/include/Geant4/G4UserTrackingAction.hh \
+  /usr/local/include/Geant4/G4VBooleanProcessor.hh \
   /usr/local/include/Geant4/G4VDigiCollection.hh \
   /usr/local/include/Geant4/G4VExternalNavigation.hh \
   /usr/local/include/Geant4/G4VHit.hh \
@@ -9512,6 +9527,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
 
 /usr/local/include/Geant4/G4DynamicParticle.hh:
 
+/usr/local/include/Geant4/G4DisplacedSolid.hh:
+
 /usr/local/include/Geant4/G4DigiFilterFactories.hh:
 
 /usr/local/include/Geant4/G4DensityEffectCalculator.hh:
@@ -9975,6 +9992,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/noexcept_move_assign_container.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/nl_types.h:
+
+/usr/local/include/Geant4/G4VBooleanProcessor.hh:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstring:
 
@@ -10526,6 +10545,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
 
 /usr/local/include/Geant4/G4PseudoScene.hh:
 
+/usr/local/include/Geant4/G4BooleanSolid.hh:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/alignment_of.h:
 
 /usr/local/include/Geant4/G4OmegabMinus.hh:
@@ -10669,6 +10690,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocation_guard.h:
+
+/usr/local/include/Geant4/G4BooleanSolid.icc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/pointer_traits.h:
 
@@ -11811,6 +11834,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
 /usr/local/include/Geant4/G4VModelFactory.hh:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h:
+
+/usr/local/include/Geant4/G4SubtractionSolid.hh:
 
 /usr/local/include/Geant4/G4PDefManager.hh:
 

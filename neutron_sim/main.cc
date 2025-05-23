@@ -33,7 +33,6 @@ int main(int argc, char** argv)
 
   auto runManager = new G4RunManager();
 
-
   runManager->SetUserInitialization(new DetectorConstruction());
   runManager->SetUserInitialization(new PhysicsList());
   runManager->SetUserInitialization(new ActionInitialization());
@@ -43,11 +42,10 @@ int main(int argc, char** argv)
   visManager->Initialize();
 
   G4UImanager* UIManager = G4UImanager::GetUIpointer();
-  UIManager->ApplyCommand("/control/execute vis.mac");
-  UIManager->ApplyCommand("/control/execute run.mac");
 
   G4UIExecutive* ui = new G4UIExecutive(argc, argv);
-
+  UIManager->ApplyCommand("/control/execute vis.mac");
+  UIManager->ApplyCommand("/control/execute run.mac");
   ui->SessionStart();
 
   delete ui;
