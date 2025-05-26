@@ -11,7 +11,7 @@
 RunAction::RunAction()
 {
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->CreateH1("Edep", "Energy deposited by neutrons", 20, 0., 1*MeV);
+    analysisManager->CreateH1("Edep", "Energy deposited by neutrons", 225, 0., 450*keV);
 }
 
 RunAction::~RunAction() {}
@@ -19,7 +19,7 @@ RunAction::~RunAction() {}
 void RunAction::BeginOfRunAction(const G4Run*)
 {
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->OpenFile("output.root");
+    analysisManager->OpenFile("output.csv");
 }
 
 void RunAction::EndOfRunAction(const G4Run* run)

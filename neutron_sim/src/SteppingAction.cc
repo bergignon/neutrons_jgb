@@ -28,7 +28,14 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   if (currentVolume != scoringVolume_) {return;}
 
   // collect energy deposited in this step
-  G4double edepStep = step->GetTotalEnergyDeposit();
-  eventAction_->AddEDeposit(edepStep);
-}
 
+  // First we have to check if the energy deposit is from the neutron
+  // And not a secondary particle
+
+  G4Track* track = step->GetTrack();
+  G4ParticleDefinition* particle = track->GetDefinition();
+  if (particle->GetParticleName() == "neutron") {
+    G4double edepStep = step->GetTotalEnergyDeposit();
+    eventAction_->AddEDeposit(edepStep);
+  }
+}

@@ -43,12 +43,12 @@ int main(int argc, char** argv)
 
   G4UImanager* UIManager = G4UImanager::GetUIpointer();
 
-  G4UIExecutive* ui = new G4UIExecutive(argc, argv);
+  // G4UIExecutive* ui = new G4UIExecutive(argc, argv);
   UIManager->ApplyCommand("/control/execute vis.mac");
   UIManager->ApplyCommand("/control/execute run.mac");
-  ui->SessionStart();
+  // ui->SessionStart();
 
-  delete ui;
+  // delete ui;
   delete visManager;
   delete runManager;
   return 0;
