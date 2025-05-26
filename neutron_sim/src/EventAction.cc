@@ -17,5 +17,7 @@ void EventAction::EndOfEventAction(const G4Event*)
 {
   // G4cout << "Energy Deposited : " << totalEDeposited_ << G4endl;
   auto analysisManager = G4AnalysisManager::Instance();
-  analysisManager->FillH1(0, totalEDeposited_);
+  if (totalEDeposited_ != 0) {
+    analysisManager->FillH1(0, totalEDeposited_);
+  }
 }

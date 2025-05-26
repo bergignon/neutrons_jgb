@@ -4,4 +4,4 @@
 /vis/modeling/trajectories/create/drawByCharge
 /vis/scene/endOfEventAction accumulate
 /vis/viewer/set/autoRefresh true
-/vis/open VTK
+# /vis/open VTK
