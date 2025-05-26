@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Read and parse the file
 filename = 'build/output_h1_Edep.csv'
 
 bin_counts = []
@@ -24,16 +23,14 @@ for line in lines:
     if line:
         data_lines.append(line)
 
-# Extract bin contents
-for line in data_lines[:num_bins]:  # Only take the number of bins
+
+for line in data_lines[:num_bins]:  
     values = line.split(',')
     entries = float(values[0])
     bin_counts.append(entries)
 
-# Bin edges
 bin_edges = np.linspace(bin_start, bin_end, num_bins + 1)
 
-# Plotting
 plt.figure(figsize=(8, 5))
 plt.hist(
     bin_edges[:-1],
@@ -43,6 +40,7 @@ plt.hist(
     edgecolor='black',
     color='mediumseagreen'
 )
+
 total_events = sum(bin_counts)
 print("Total number of events : ", total_events, "/15000")
 plt.xticks(np.arange(0, 420, 20))
