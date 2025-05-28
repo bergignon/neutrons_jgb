@@ -14,7 +14,6 @@ DetectorConstruction::~DetectorConstruction() {}
 void DetectorConstruction::defineMaterials()
 {
   G4NistManager* manager = G4NistManager::Instance();
-  manager->SetVerbose(1); // Utile pour debug
 
   worldMaterial_ = manager->FindOrBuildMaterial("G4_Galactic");
   targetMaterial_= manager->FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");

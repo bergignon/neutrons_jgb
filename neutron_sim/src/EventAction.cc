@@ -8,16 +8,20 @@
 
 EventAction::EventAction(RunAction* runAction) : runAction_(runAction) {}
 
-void EventAction::BeginOfEventAction(const G4Event*)
+void EventAction::BeginOfEventAction(const G4Event* event)
 {
   totalEDeposited_ = 0.;
+  particleEnergy_  = event->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy();
 }
 
-void EventAction::EndOfEventAction(const G4Event*)
+void EventAction::EndOfEventAction(const G4Event* event)
 {
   // G4cout << "Energy Deposited : " << totalEDeposited_ << G4endl;
   auto analysisManager = G4AnalysisManager::Instance();
+  // if (totalEDeposited_ != 0) {
+  //   analysisManager->FillH1(0, totalEDeposited_);
+  // }
   if (totalEDeposited_ != 0) {
-    analysisManager->FillH1(0, totalEDeposited_);
-  }
+    analysisManager->FillH2(0, totalEDeposited_, particleEnergy_);
+  } 
 }

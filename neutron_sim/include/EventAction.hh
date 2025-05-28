@@ -20,6 +20,7 @@ class EventAction : public G4UserEventAction
   private:
     RunAction* runAction_       = nullptr;
     G4double   totalEDeposited_ = 0.;
+    G4double   particleEnergy_  = 0.; 
 };
 
 #endif
