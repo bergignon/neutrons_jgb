@@ -15,7 +15,7 @@ class EventAction : public G4UserEventAction
     void BeginOfEventAction(const G4Event* event) override;
     void EndOfEventAction(const G4Event* event) override;
 
-    void AddEDeposit(G4double eDeposit) { totalEDeposited_ += eDeposit; }
+    void AddEDeposit(G4double eDeposit);
 
   private:
     RunAction* runAction_       = nullptr;
