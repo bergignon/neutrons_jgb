@@ -27,8 +27,6 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   // Exit if not in the scintillator
   if (currentVolume != scoringVolume_) {return;}
 
-  // collect energy deposited in this step
-
   G4double edepStep = step->GetTotalEnergyDeposit();
   // G4cout << "Stepping action with deposit  : " << edepStep << G4endl;
   eventAction_->AddEDeposit(edepStep);

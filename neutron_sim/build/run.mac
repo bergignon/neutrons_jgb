@@ -1,7 +1,7 @@
-/gps/particle gamma
+/gps/particle neutron
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
-/gps/energy 1253 keV
+/gps/energy 1 MeV
 
 # Debugging 
 # /tracking/verbose 3
