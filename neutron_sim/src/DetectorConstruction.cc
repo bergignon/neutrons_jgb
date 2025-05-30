@@ -69,8 +69,8 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                                     0,                                      // Copy number
                                     true);                                  // Overlaps checking
 
-  solidCasing_ = new G4Tubs("solidCasing", 0.*cm, TARGET_RADIUS + 2.*mm,
-      TARGET_HEIGHT + 2.*mm, 0*deg, 360.*deg);
+  solidCasing_ = new G4Tubs("solidCasing", 0.*cm, TARGET_RADIUS + 1.5*mm,
+      TARGET_HEIGHT + 1.5*mm, 0*deg, 360.*deg);
 
   hollowCasing_ = new G4SubtractionSolid("hollowCasing", solidCasing_, solidTarget_);
 

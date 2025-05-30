@@ -1,17 +1,21 @@
-/gps/particle neutron
+/gps/particle gamma
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
 
+# Debugging
+
+/tracking/verbose 3
+
 # Define the zone where the neutrons will be shot
 /gps/ang/type iso
-/gps/ang/mintheta 178.545001 deg
+/gps/ang/mintheta 177.09002 deg
 
 # For single energy Runs
-# /run/beamOn 10000
-# /gps/energy 1 MeV
+/run/beamOn 1
+/gps/energy 662 keV
 
 # Runs with different particle energies
-/control/loop loop.mac particleEnergy 1. 10. 0.2
+#/control/loop loop.mac particleEnergy 1. 10. 0.2
 
 /analysis/write
 /analysis/closeFile

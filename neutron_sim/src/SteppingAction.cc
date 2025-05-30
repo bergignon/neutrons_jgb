@@ -32,10 +32,12 @@ void SteppingAction::UserSteppingAction(const G4Step* step)
   // First we have to check if the energy deposit is from the neutron
   // And not a secondary particle
 
-  G4Track* track = step->GetTrack();
-  G4ParticleDefinition* particle = track->GetDefinition();
-  if (particle->GetParticleName() == "neutron") {
-    G4double edepStep = step->GetTotalEnergyDeposit();
-    eventAction_->AddEDeposit(edepStep);
-  }
+  // G4Track* track = step->GetTrack();
+  // G4ParticleDefinition* particle = track->GetDefinition();
+  // if (particle->GetParticleName() == "gamma") {
+  //   G4double edepStep = step->GetTotalEnergyDeposit();
+  //   eventAction_->AddEDeposit(edepStep);
+  // }
+  G4double edepStep = step->GetTotalEnergyDeposit();
+  eventAction_->AddEDeposit(edepStep);
 }
