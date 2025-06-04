@@ -2,6 +2,7 @@
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
 /gps/energy 1 MeV
+/run/setCutForAGivenParticle proton 1 um
 
 # Debugging 
 # /tracking/verbose 3
@@ -11,7 +12,7 @@
 /gps/ang/mintheta 178.545001 deg
 
 # For single energy Runs
-/run/beamOn 100000
+/run/beamOn 50000
 
 # Runs with different particle energies
 #/control/loop loop.mac particleEnergy 1. 10. 0.2

@@ -1,7 +1,6 @@
 #include "DetectorConstruction.hh"
 #include "G4tgbVolumeMgr.hh"
 
-
 const G4double WORLD_RADIUS  = 1.2*m;
 const G4double TARGET_RADIUS = 2.54*cm;
 const G4double TARGET_HEIGHT = 5.08*cm;
