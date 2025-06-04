@@ -11,7 +11,7 @@
 RunAction::RunAction()
 {
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->CreateH1("Edep", "Energy deposited by neutrons", 1500, 0, 1500*keV);
+    analysisManager->CreateH1("Edep", "Energy deposited by neutrons", 2000, 0, 1000*keV);
     // analysisManager->CreateH2("Edep", "Energy deposited by neutrons", 
     //                             420, 0., 420*keV,
     //                             50, 1., 10.*MeV);

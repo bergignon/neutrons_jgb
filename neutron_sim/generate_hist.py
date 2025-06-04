@@ -8,8 +8,8 @@ filename = 'build/output_h1_Edep.csv'
 bin_counts = []
 bin_edges = []
 bin_start = 0
-bin_end = 1500
-num_bins = 1500
+bin_end = 1000
+num_bins = 2000
 
 with open(filename, 'r') as file:
     lines = file.readlines()
@@ -45,11 +45,11 @@ plt.hist(
 
 total_events = sum(bin_counts)
 print("Total number of events : ", total_events, "/100000")
-plt.xticks(np.arange(0, 1500, 100))
-plt.title('Energy deposited by neutrons')
+plt.xticks(np.arange(0, 1000, 50))
+plt.title('Energy of secondary protons')
 plt.xlabel('Energy (keV)')  
 plt.ylabel('Count')
-plt.yscale('log')
+# plt.yscale('log')
 plt.grid(True)
 plt.tight_layout()
 plt.show()

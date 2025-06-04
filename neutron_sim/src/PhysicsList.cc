@@ -9,6 +9,7 @@
 #include "G4StoppingPhysics.hh"
 #include "G4HadronElasticPhysicsHP.hh"
 #include "G4HadronPhysicsQGSP_BIC_ALLHP.hh"
+#include "G4HadronPhysicsQGSP_BIC_HP.hh"
 
 PhysicsList::PhysicsList(): G4VModularPhysicsList()
 {
@@ -34,7 +35,6 @@ PhysicsList::PhysicsList(): G4VModularPhysicsList()
     // Ion Physics
     RegisterPhysics(new G4IonElasticPhysics(0));
     RegisterPhysics(new G4IonPhysics(0));
-
 }
 
 PhysicsList::~PhysicsList() {}
