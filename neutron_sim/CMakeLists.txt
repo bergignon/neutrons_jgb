@@ -24,6 +24,7 @@ include(${Geant4_USE_FILE})
 #include_directories(${PROJECT_SOURCE_DIR}/include ${G4mpi_INCLUDE_DIR})
 include_directories(${PROJECT_SOURCE_DIR}/include)
 
+
 #----------------------------------------------------------------------------
 # Locate sources and headers for this project
 # NB: headers are included so they will show up in IDEs
