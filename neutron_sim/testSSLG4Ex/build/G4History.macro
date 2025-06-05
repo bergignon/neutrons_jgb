@@ -1,0 +1,36 @@
+/run/verbose 0
+/run/numberOfThreads 1
+/run/printProgress 100
+/process/optical/boundary/setInvokeSD true
+/run/physicsModified
+/process/optical/processActivation OpAbsorption true
+/run/physicsModified
+/process/optical/processActivation OpRayleigh true
+/run/physicsModified
+/process/optical/processActivation Scintillation true
+/run/physicsModified
+/process/optical/processActivation Cerenkov false
+/run/physicsModified
+/process/optical/scintillation/setByParticleType false
+/run/physicsModified
+/process/optical/scintillation/setFiniteRiseTime false
+/run/physicsModified
+/run/initialize
+/control/alias scnt olsc-101
+/control/alias pathToDataDir sslg4/data/oscnt/olsc-101
+/mpt/olsc-101/addProperty SCINTILLATIONCOMPONENT1 sslg4/data/oscnt/olsc-101/scntComp1.txt nm unitless
+/mpt/olsc-101/addProperty RINDEX sslg4/data/oscnt/olsc-101/rIndex.txt nm unitless
+/mpt/olsc-101/addProperty ABSLENGTH sslg4/data/oscnt/olsc-101/absLength.txt nm cm
+/mpt/olsc-101/addConstProperty SCINTILLATIONYIELD 12300 1/MeV
+/mpt/olsc-101/addConstProperty SCINTILLATIONYIELD1 1
+/mpt/olsc-101/addConstProperty SCINTILLATIONTIMECONSTANT1 3.5 ns
+/mpt/olsc-101/addConstProperty SCINTILLATIONRISETIME1 1.0 ns
+/mpt/olsc-101/addConstProperty RESOLUTIONSCALE 1.0
+/gps/particle neutron
+/gps/number 1
+/gps/pos/centre 0.0 0.0 0.0
+/gps/energy 1 MeV
+/run/setCutForAGivenParticle proton 0.5 um
+/gps/ang/type iso
+/gps/ang/mintheta 178.545001 deg
+/run/beamOn 2000000
