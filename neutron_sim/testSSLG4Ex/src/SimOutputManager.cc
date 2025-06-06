@@ -44,7 +44,8 @@ void SimOutputManager::EndOfEventAction(const G4Event *event)
   mEventID = event->GetEventID();
   SetStackingActionOutputs();
   // G4cout << mEmittedScntPhotonNum << '\n';
-  outputFile_ << mEmittedScntPhotonNum << ',' << mEdep << ',' << neutronEdep << '\n';
+  outputFile_ << mEmittedScntPhotonNum << ',' << mEdep << ',' << eProtons << ','
+              << eElectrons << ',' << eGammas << ',' << eC12 << ',' << eDeuteron << '\n';
   outputFile_.flush();
   Reset();
 }
@@ -71,7 +72,11 @@ void SimOutputManager::Reset()
   // General
   mEventID = -1;
   mEdep = 0.;
-  neutronEdep = 0.;
+  eProtons = 0.;
+  eElectrons = 0.;
+  eGammas = 0.;
+  eC12 = 0.;
+  eDeuteron = 0.;
   mEmittedScntPhotonNum = -1;
   mEmittedCerenkovPhotonNum = -1;
 }

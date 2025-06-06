@@ -40,14 +40,6 @@
 #/process/optical/scintillation/setFiniteRiseTime false
 #/process/optical/scintillation/verbose verbose
 
-###################Analysis commands############################################
-
-#analysis output
-/analysis/setDefaultFileType csv
-#/analysis/verbose 0 # up to 4 print only first ntuple
-#/analysis/list true #[onlyIfActive]
-
-/analysis/ntuple/setActivation 0 false #GeneralInfo
 
 ################################################################################
 
@@ -60,10 +52,10 @@
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
 /gps/energy 1 MeV
-/run/setCutForAGivenParticle proton 1 um
+/run/setCutForAGivenParticle proton 0.5 um
 
 # Debugging 
-# /tracking/verbose 3
+#/tracking/verbose 3
 
 # Define the zone where the neutrons will be shot
 /gps/ang/type iso

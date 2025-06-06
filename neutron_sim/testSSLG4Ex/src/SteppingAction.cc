@@ -33,13 +33,6 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
 
   // G4cout << edepStep << " : Deposit" << G4endl;
   G4Track *track = step->GetTrack();
-  G4ParticleDefinition *particle = track->GetDefinition();
-  if (particle->GetParticleName() == "neutron")
-  {
-
-    // G4cout << edepStep << " : NEUTRON Deposit" << G4endl;
-    mSimOutputManager->AddNEdep(edepStep);
-  }
 
   const std::vector<const G4Track *> *secondaries = step->GetSecondaryInCurrentStep();
 
@@ -53,16 +46,34 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
       G4String particleName = particleDef->GetParticleName();
       G4double kineticEnergy = secTrack->GetKineticEnergy();
 
+      // if (particleName != "opticalphoton")
+      // {
+      //   G4cout << "Secondary " << particleName << " : " << kineticEnergy << G4endl;
+      // }
+
       if (particleName == "proton")
       {
         auto analysisManager = G4AnalysisManager::Instance();
         analysisManager->FillH1(0, kineticEnergy);
         // outputFile_ << std::fixed << std::setprecision(7) << kineticEnergy << "\n";
+        mSimOutputManager->AddEProton(kineticEnergy);
       }
-
-      // G4cout << "Secondary: " << particleName
-      //        << " | Energy: " << kineticEnergy / MeV << " MeV"
-      //        << G4endl;
+      else if (particleName == "e-")
+      {
+        mSimOutputManager->AddEElectron(kineticEnergy);
+      }
+      else if (particleName == "gamma")
+      {
+        mSimOutputManager->AddEGamma(kineticEnergy);
+      }
+      else if (particleName == "deuteron")
+      {
+        mSimOutputManager->AddEDeuteron(kineticEnergy);
+      }
+      else if (particleName == "C12")
+      {
+        mSimOutputManager->AddEC12(kineticEnergy);
+      }
     }
   }
 }

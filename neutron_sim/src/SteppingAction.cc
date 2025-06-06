@@ -65,9 +65,9 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
         outputFile_ << std::fixed << std::setprecision(7) << kineticEnergy << "\n";
       }
 
-      // G4cout << "Secondary: " << particleName
-      //        << " | Energy: " << kineticEnergy / MeV << " MeV"
-      //        << G4endl;
+      G4cout << "Secondary: " << particleName
+             << " | Energy: " << kineticEnergy / MeV << " MeV"
+             << G4endl;
     }
   }
 }

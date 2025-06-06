@@ -29,7 +29,11 @@ public:
 
 public: // UI commands
   void AddEdep(G4double edep) { mEdep += edep; }
-  void AddNEdep(G4double nedep) { neutronEdep += nedep; }
+  void AddEProton(G4double protonE) { eProtons += protonE; }
+  void AddEElectron(G4double electronE) { eElectrons += electronE; }
+  void AddEGamma(G4double gammaE) { eGammas += gammaE; }
+  void AddEC12(G4double c12E) { eC12 += c12E; }
+  void AddEDeuteron(G4double deuteronE) { eDeuteron += deuteronE; }
 
 private:
   void Reset();
@@ -43,7 +47,11 @@ private: // members
   // General outputs
   int mEventID;
   double mEdep;
-  double neutronEdep;
+  double eProtons;
+  double eElectrons;
+  double eGammas;
+  double eC12;
+  double eDeuteron;
   int mEmittedScntPhotonNum;
   int mEmittedCerenkovPhotonNum;
 

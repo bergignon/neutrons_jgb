@@ -31,6 +31,10 @@
 /gps/pos/centre 0.0 0.0 0.0
 /gps/energy 1 MeV
 /run/setCutForAGivenParticle proton 0.5 um
+/run/setCutForAGivenParticle e- 0.5 um
+/run/setCutForAGivenParticle gamma 0.5 um
 /gps/ang/type iso
 /gps/ang/mintheta 178.545001 deg
-/run/beamOn 2000000
+/run/beamOn 100000
+/analysis/write
+/analysis/closeFile

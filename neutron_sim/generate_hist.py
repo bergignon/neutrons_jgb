@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 
-filename = 'build/output_h1_Edep.csv'
+filename = 'testSSLG4Ex/build/output_h1_Edep.csv'
+# filename = 'build/output_h1_Edep.csv'
 
 bin_counts = []
 bin_edges = []

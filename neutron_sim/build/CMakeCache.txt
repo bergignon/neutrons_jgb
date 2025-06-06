@@ -289,7 +289,7 @@ FREETYPE_LIBRARY_DEBUG:FILEPATH=FREETYPE_LIBRARY_DEBUG-NOTFOUND
 FREETYPE_LIBRARY_RELEASE:FILEPATH=/opt/homebrew/lib/libfreetype.dylib
 
 //Path to a file.
-Fontconfig_INCLUDE_DIR:PATH=/usr/X11/include
+Fontconfig_INCLUDE_DIR:PATH=/opt/homebrew/Cellar/fontconfig/2.16.0/include
 
 //Path to a library.
 Fontconfig_LIBRARY:FILEPATH=/opt/homebrew/lib/libfontconfig.dylib
@@ -863,15 +863,6 @@ X11_xkbfile_INCLUDE_PATH:PATH=/usr/X11R6/include
 X11_xkbfile_LIB:FILEPATH=/usr/X11R6/lib/libxkbfile.dylib
 
 //Path to a file.
-XQuartzGL_INCLUDE_DIR:PATH=/usr/X11R6/include
-
-//Path to a library.
-XQuartzGL_gl_LIBRARY:FILEPATH=/usr/X11R6/lib/libGL.dylib
-
-//Path to a library.
-XQuartzGL_glu_LIBRARY:FILEPATH=/usr/X11R6/lib/libGLU.dylib
-
-//Path to a file.
 ZLIB_INCLUDE_DIR:PATH=/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include
 
 //Path to a library.
@@ -1137,8 +1128,6 @@ FIND_PACKAGE_MESSAGE_DETAILS_WrapOpenGL:INTERNAL=[ON][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_WrapVulkanHeaders:INTERNAL=[/usr/local/include][v()]
 //Details about finding X11
 FIND_PACKAGE_MESSAGE_DETAILS_X11:INTERNAL=[/opt/homebrew/include][/opt/homebrew/lib/libX11.dylib][ ][v()]
-//Details about finding XQuartzGL
-FIND_PACKAGE_MESSAGE_DETAILS_XQuartzGL:INTERNAL=[/usr/X11R6/include][/usr/X11R6/lib/libGL.dylib][v()]
 //Details about finding ZLIB
 FIND_PACKAGE_MESSAGE_DETAILS_ZLIB:INTERNAL=[/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib/libz.tbd][/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include][ ][v1.2.12()]
 //Details about finding double-conversion
@@ -2329,12 +2318,6 @@ X11_xkbcommon_X11_LIB-ADVANCED:INTERNAL=1
 X11_xkbfile_INCLUDE_PATH-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: X11_xkbfile_LIB
 X11_xkbfile_LIB-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: XQuartzGL_INCLUDE_DIR
-XQuartzGL_INCLUDE_DIR-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: XQuartzGL_gl_LIBRARY
-XQuartzGL_gl_LIBRARY-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: XQuartzGL_glu_LIBRARY
-XQuartzGL_glu_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_INCLUDE_DIR
 ZLIB_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: ZLIB_LIBRARY_DEBUG

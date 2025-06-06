@@ -9,7 +9,7 @@
 # Change the default number of threads (in multi-threaded mode)
 /run/numberOfThreads 1
 /run/printProgress 100
-#/tracking/verbose 1
+# /tracking/verbose 3
 
 ###############################Physics process commands#########################
 
@@ -52,6 +52,8 @@
 /gps/pos/centre 0.0 0.0 0.0
 /gps/energy 1 MeV
 /run/setCutForAGivenParticle proton 0.5 um
+/run/setCutForAGivenParticle e- 0.5 um
+/run/setCutForAGivenParticle gamma 0.5 um
 
 # Debugging 
 # /tracking/verbose 3
@@ -62,7 +64,7 @@
 
 ###################Run start####################################################
 
-/run/beamOn 2000000
+/run/beamOn 100000
 
 /analysis/write
 /analysis/closeFile
