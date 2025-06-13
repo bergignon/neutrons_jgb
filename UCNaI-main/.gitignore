@@ -1,0 +1,11 @@
+DEVNOTES
+*~
+*.out
+*.log
+*.mca
+*.root
+*.rad
+*.spe
+*.wrl
+tmp*
+*.dat

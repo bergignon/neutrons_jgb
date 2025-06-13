@@ -42,9 +42,9 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
     return;
   }
 
-  // G4double edepStep = step->GetTotalEnergyDeposit();
+  G4double edepStep = step->GetTotalEnergyDeposit();
   // G4cout << "Stepping action with deposit  : " << edepStep << G4endl;
-  // eventAction_->AddEDeposit(edepStep);
+  eventAction_->AddEDeposit(edepStep);
 
   const std::vector<const G4Track *> *secondaries = step->GetSecondaryInCurrentStep();
 
@@ -65,9 +65,9 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
         outputFile_ << std::fixed << std::setprecision(7) << kineticEnergy << "\n";
       }
 
-      G4cout << "Secondary: " << particleName
-             << " | Energy: " << kineticEnergy / MeV << " MeV"
-             << G4endl;
+      //     G4cout << "Secondary: " << particleName
+      //            << " | Energy: " << kineticEnergy / MeV << " MeV"
+      //            << G4endl;
     }
   }
 }

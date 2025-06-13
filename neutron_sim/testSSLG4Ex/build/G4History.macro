@@ -26,15 +26,15 @@
 /mpt/olsc-101/addConstProperty SCINTILLATIONTIMECONSTANT1 3.5 ns
 /mpt/olsc-101/addConstProperty SCINTILLATIONRISETIME1 1.0 ns
 /mpt/olsc-101/addConstProperty RESOLUTIONSCALE 1.0
-/gps/particle neutron
+/gps/particle gamma
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
-/gps/energy 1 MeV
+/gps/energy 662 keV
 /run/setCutForAGivenParticle proton 0.5 um
 /run/setCutForAGivenParticle e- 0.5 um
 /run/setCutForAGivenParticle gamma 0.5 um
 /gps/ang/type iso
 /gps/ang/mintheta 178.545001 deg
-/run/beamOn 100000
+/run/beamOn 200000
 /analysis/write
 /analysis/closeFile

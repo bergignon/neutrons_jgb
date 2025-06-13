@@ -30,10 +30,7 @@ public:
 public: // UI commands
   void AddEdep(G4double edep) { mEdep += edep; }
   void AddEProton(G4double protonE) { eProtons += protonE; }
-  void AddEElectron(G4double electronE) { eElectrons += electronE; }
-  void AddEGamma(G4double gammaE) { eGammas += gammaE; }
   void AddEC12(G4double c12E) { eC12 += c12E; }
-  void AddEDeuteron(G4double deuteronE) { eDeuteron += deuteronE; }
 
 private:
   void Reset();
@@ -44,16 +41,10 @@ private:
                       const G4Event *event) const;
 
 private: // members
-  // General outputs
-  int mEventID;
   double mEdep;
   double eProtons;
-  double eElectrons;
-  double eGammas;
   double eC12;
-  double eDeuteron;
   int mEmittedScntPhotonNum;
-  int mEmittedCerenkovPhotonNum;
 
   std::vector<G4double> mOPEnergyVec;
   std::vector<G4double> mOPWavelengthVec;

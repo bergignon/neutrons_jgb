@@ -1,0 +1,44 @@
+#ifndef EventAction_h
+#define EventAction_h 1
+
+#include "G4UserEventAction.hh"
+#include "G4EventManager.hh"
+#include "TrackerGammaSD.hh"
+#include "G4Event.hh"
+#include "EventInformation.hh"
+#include "G4TrajectoryContainer.hh"
+#include "G4Trajectory.hh"
+#include "G4ios.hh"
+#include "globals.hh"
+#include "G4UnitsTable.hh"
+#include <fstream>
+#include <string>
+
+class EventAction : public G4UserEventAction
+{
+public:
+  EventAction();
+  ~EventAction();
+
+  void BeginOfEventAction(const G4Event *);
+  void EndOfEventAction(const G4Event *);
+  void SetOutFile(G4String);
+  const G4Event *GetEvent() { return evt; }
+
+  void SetNTotalevents(G4int n) { NTotalEvents = n; }
+  G4int GetNTotalevents() { return NTotalEvents; }
+  void SetEveryNEvents(G4int n) { everyNevents = n; }
+  G4int GetEveryNEvents() { return everyNevents; }
+
+private:
+  G4int gammaCollectionID;
+  G4String outFileName;
+  G4int NTotalEvents;
+  G4int everyNevents;
+  G4int timerCount;
+  G4double eventsPerSecond;
+  const G4Event *evt;
+  std::fstream file;
+};
+
+#endif // EVENTACTION_H

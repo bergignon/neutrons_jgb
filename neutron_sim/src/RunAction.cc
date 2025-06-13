@@ -7,30 +7,26 @@
 #include "G4SystemOfUnits.hh"
 #include <iostream>
 
-
 RunAction::RunAction()
 {
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->CreateH1("Edep", "Energy deposited by neutrons", 2000, 0, 1000*keV);
-    // analysisManager->CreateH2("Edep", "Energy deposited by neutrons", 
+    analysisManager->CreateH1("Edep", "Energy deposited by gammas", 1400, 0, 1400 * keV);
+    // analysisManager->CreateH2("Edep", "Energy deposited by neutrons",
     //                             420, 0., 420*keV,
     //                             50, 1., 10.*MeV);
 }
 
 RunAction::~RunAction() {}
 
-void RunAction::BeginOfRunAction(const G4Run*)
+void RunAction::BeginOfRunAction(const G4Run *)
 {
     auto analysisManager = G4AnalysisManager::Instance();
     analysisManager->OpenFile("output.csv");
 }
 
-void RunAction::EndOfRunAction(const G4Run* run)
+void RunAction::EndOfRunAction(const G4Run *run)
 {
     auto analysisManager = G4AnalysisManager::Instance();
     // analysisManager->Write();
     // analysisManager->CloseFile();
 }
-
-
-

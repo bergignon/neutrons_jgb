@@ -58,18 +58,6 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
         // outputFile_ << std::fixed << std::setprecision(7) << kineticEnergy << "\n";
         mSimOutputManager->AddEProton(kineticEnergy);
       }
-      else if (particleName == "e-")
-      {
-        mSimOutputManager->AddEElectron(kineticEnergy);
-      }
-      else if (particleName == "gamma")
-      {
-        mSimOutputManager->AddEGamma(kineticEnergy);
-      }
-      else if (particleName == "deuteron")
-      {
-        mSimOutputManager->AddEDeuteron(kineticEnergy);
-      }
       else if (particleName == "C12")
       {
         mSimOutputManager->AddEC12(kineticEnergy);

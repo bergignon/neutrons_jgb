@@ -11,10 +11,8 @@
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SimOutputManager::SimOutputManager() : mEventID{-1},
-                                       mEdep{0.},
-                                       mEmittedScntPhotonNum{-1},
-                                       mEmittedCerenkovPhotonNum{-1}
+SimOutputManager::SimOutputManager() : mEdep{0.},
+                                       mEmittedScntPhotonNum{-1}
 {
   Initialize();
 }
@@ -32,7 +30,6 @@ SimOutputManager::~SimOutputManager()
 void SimOutputManager::Initialize()
 {
   outputFile_.open("output.csv");
-  outputFile_ << "Scintillation photons\n";
 }
 
 void SimOutputManager::BeginOfEventAction(const G4Event *event)
@@ -41,11 +38,11 @@ void SimOutputManager::BeginOfEventAction(const G4Event *event)
 
 void SimOutputManager::EndOfEventAction(const G4Event *event)
 {
-  mEventID = event->GetEventID();
   SetStackingActionOutputs();
   // G4cout << mEmittedScntPhotonNum << '\n';
-  outputFile_ << mEmittedScntPhotonNum << ',' << mEdep << ',' << eProtons << ','
-              << eElectrons << ',' << eGammas << ',' << eC12 << ',' << eDeuteron << '\n';
+  auto analysisManager = G4AnalysisManager::Instance();
+  analysisManager->FillH1(0, mEdep);
+  outputFile_ << mEmittedScntPhotonNum << ',' << mEdep << ',' << eProtons << ',' << eC12 << '\n';
   outputFile_.flush();
   Reset();
 }
@@ -59,8 +56,6 @@ void SimOutputManager::SetStackingActionOutputs()
   if (userSA)
   {
     mEmittedScntPhotonNum = userSA->GetEmittedScintillationPhotonNumber();
-    mEmittedCerenkovPhotonNum = userSA->GetEmittedCerenkovPhotonNumber();
-
     mOPEnergyVec = userSA->GetOPEnergyVector();
     mOPWavelengthVec = userSA->GetOPWavelengthVector();
     mOPTimeVec = userSA->GetOPTimeVector();
@@ -70,13 +65,8 @@ void SimOutputManager::SetStackingActionOutputs()
 void SimOutputManager::Reset()
 {
   // General
-  mEventID = -1;
   mEdep = 0.;
   eProtons = 0.;
-  eElectrons = 0.;
-  eGammas = 0.;
   eC12 = 0.;
-  eDeuteron = 0.;
   mEmittedScntPhotonNum = -1;
-  mEmittedCerenkovPhotonNum = -1;
 }

@@ -11,7 +11,7 @@ RunAction::RunAction(SimOutputManager *histo)
     : mSimOutputManager(histo)
 {
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->CreateH1("Edep", "Energy deposited by neutrons", 2000, 0, 1000 * keV);
+    analysisManager->CreateH1("Edep", "Energy deposited by neutrons", 700, 0, 700 * keV);
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

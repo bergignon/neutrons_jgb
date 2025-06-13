@@ -3,14 +3,14 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 
-filename = 'testSSLG4Ex/build/output_h1_Edep.csv'
-# filename = 'build/output_h1_Edep.csv'
+# filename = 'testSSLG4Ex/build/output_h1_Edep.csv'
+filename = 'build/output_h1_Edep.csv'
 
 bin_counts = []
 bin_edges = []
 bin_start = 0
-bin_end = 1000
-num_bins = 2000
+bin_end = 1400
+num_bins = 1400
 
 with open(filename, 'r') as file:
     lines = file.readlines()
@@ -33,6 +33,11 @@ for line in data_lines[:num_bins]:
     bin_counts.append(entries)
 
 bin_edges = np.linspace(bin_start, bin_end, num_bins + 1)
+# bin_width = bin_edges[1] - bin_edges[0]
+
+total_events = sum(bin_counts)
+# normalized_counts = np.array(bin_counts) / (total_events * bin_width)
+
 
 plt.figure(figsize=(8, 5))
 plt.hist(
@@ -44,10 +49,10 @@ plt.hist(
     color='mediumseagreen'
 )
 
-total_events = sum(bin_counts)
-print("Total number of events : ", total_events, "/100000")
-plt.xticks(np.arange(0, 1000, 50))
-plt.title('Energy of secondary protons')
+
+print("Total number of events : ", total_events, "/200000")
+plt.xticks(np.arange(0, 1400, 100))
+plt.title('Energy deposited by gammas')
 plt.xlabel('Energy (keV)')  
 plt.ylabel('Count')
 plt.yscale('log')

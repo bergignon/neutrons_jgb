@@ -1,0 +1,10 @@
+# Geometry =====================================================================
+/Source/Simple 1000 keV
+/Source/Capsule/Construct
+/NaI/setZ 20 cm
+
+# Initialize run manager =======================================================
+/run/initialize
+
+/Output/Filename e1000.out
+/run/beamOn 1000000

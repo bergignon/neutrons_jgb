@@ -47,10 +47,10 @@
 
 ###################Primary particle commands####################################
 
-/gps/particle neutron
+/gps/particle gamma
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
-/gps/energy 1 MeV
+/gps/energy 662 keV
 /run/setCutForAGivenParticle proton 0.5 um
 /run/setCutForAGivenParticle e- 0.5 um
 /run/setCutForAGivenParticle gamma 0.5 um
@@ -64,7 +64,7 @@
 
 ###################Run start####################################################
 
-/run/beamOn 100000
+/run/beamOn 200000
 
 /analysis/write
 /analysis/closeFile

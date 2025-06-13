@@ -1,0 +1,8 @@
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/UCNaI.dir
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/UCNaI_.dir
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/edit_cache.dir
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/rebuild_cache.dir
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/list_install_components.dir
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/install.dir
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/install/local.dir
+/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/UCNaI-main/build/CMakeFiles/install/strip.dir
