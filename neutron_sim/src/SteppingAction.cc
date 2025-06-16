@@ -8,6 +8,7 @@
 #include "G4LogicalVolume.hh"
 #include "G4AnalysisManager.hh"
 #include "G4Neutron.hh"
+#include "G4Gamma.hh"
 
 SteppingAction::SteppingAction(EventAction *eventAction) : eventAction_(eventAction)
 {
@@ -43,18 +44,19 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
    *
    */
 
-  auto track = step->GetTrack();
+  // auto track = step->GetTrack();
 
-  if (track->GetDefinition() == G4Neutron::Definition())
-  {
-    auto volume = step->GetPreStepPoint()->GetTouchableHandle()->GetVolume();
-    if (volume && volume->GetName() == "physicalDetector") // Or whatever your volume name is
-    {
-      auto analysisManager = G4AnalysisManager::Instance();
-      analysisManager->FillH1(1, track->GetKineticEnergy());
-      G4cout << "Neutron crossing detected at E = " << track->GetKineticEnergy() << " MeV" << G4endl;
-    }
-  }
+  // if (track->GetDefinition() == G4Gamma::Definition())
+  // {
+  //   auto volume = step->GetPreStepPoint()->GetTouchableHandle()->GetVolume();
+  //   if (volume && volume->GetName() == "physicalDetector") // Or whatever your volume name is
+  //   {
+  //     auto analysisManager = G4AnalysisManager::Instance();
+  //     analysisManager->FillH1(1, track->GetKineticEnergy());
+  //     G4cout << "Neutron crossing detected at E = " << track->GetKineticEnergy() << " MeV" << G4endl;
+  //     track->SetTrackStatus(fStopAndKill);
+  //   }
+  // }
 
   /*
    *   END OF SECTION
@@ -73,7 +75,6 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
    */
 
   G4double edepStep = step->GetTotalEnergyDeposit();
-  // G4cout << "Stepping action with deposit  : " << edepStep << G4endl;
   eventAction_->AddEDeposit(edepStep);
 
   /*
