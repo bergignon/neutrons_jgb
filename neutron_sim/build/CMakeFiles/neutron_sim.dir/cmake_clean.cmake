@@ -13,8 +13,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/neutron_sim.dir/src/PhysicsList.cc.o.d"
   "CMakeFiles/neutron_sim.dir/src/RunAction.cc.o"
   "CMakeFiles/neutron_sim.dir/src/RunAction.cc.o.d"
+  "CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.o"
+  "CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.o.d"
   "CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o"
   "CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o.d"
+  "CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o"
+  "CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o.d"
   "neutron_sim"
   "neutron_sim.pdb"
 )

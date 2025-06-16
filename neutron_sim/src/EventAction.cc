@@ -16,15 +16,10 @@ void EventAction::BeginOfEventAction(const G4Event *event)
 
 void EventAction::EndOfEventAction(const G4Event *event)
 {
-  // G4cout << "Total Final Energy Deposited :                         " << totalEDeposited_ << G4endl;
+  // G4cout << "Energy deposit of : " << totalEDeposited_ << " MeV" << G4endl;
   auto analysisManager = G4AnalysisManager::Instance();
-  if (totalEDeposited_ != 0)
-  {
-    // analysisManager->FillH1(0, totalEDeposited_);
-  }
-  // if (totalEDeposited_ != 0) {
-  //   analysisManager->FillH2(0, totalEDeposited_, particleEnergy_);
-  // }
+  analysisManager->FillH1(0, totalEDeposited_);
+  // analysisManager->FillH2(0, totalEDeposited_, particleEnergy_);
 }
 
 void EventAction::AddEDeposit(G4double eDeposit)

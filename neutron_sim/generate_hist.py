@@ -4,13 +4,13 @@ from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 
 # filename = 'testSSLG4Ex/build/output_h1_Edep.csv'
-filename = 'build/output_h1_Edep.csv'
+filename = 'build/output_h1_neutronD.csv'
 
 bin_counts = []
 bin_edges = []
 bin_start = 0
-bin_end = 1400
-num_bins = 1400
+bin_end = 1200
+num_bins = 1200
 
 with open(filename, 'r') as file:
     lines = file.readlines()
@@ -51,8 +51,8 @@ plt.hist(
 
 
 print("Total number of events : ", total_events, "/200000")
-plt.xticks(np.arange(0, 1400, 100))
-plt.title('Energy deposited by gammas')
+plt.xticks(np.arange(0, 1200, 100))
+plt.title('')
 plt.xlabel('Energy (keV)')  
 plt.ylabel('Count')
 plt.yscale('log')

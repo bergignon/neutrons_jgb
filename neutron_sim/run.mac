@@ -12,7 +12,7 @@
 /gps/ang/mintheta 178.545001 deg
 
 # For single energy Runs
-/run/beamOn 200000
+/run/beamOn 100000
 
 # Runs with different particle energies
 #/control/loop loop.mac particleEnergy 1. 10. 0.2
