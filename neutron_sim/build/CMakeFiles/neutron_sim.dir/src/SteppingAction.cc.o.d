@@ -877,6 +877,8 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: \
   /usr/local/include/Geant4/G4Visible.hh \
   /usr/local/include/Geant4/G4Visible.icc \
   /usr/local/include/Geant4/G4Box.icc \
+  /usr/local/include/Geant4/G4Sphere.hh \
+  /usr/local/include/Geant4/G4Sphere.icc \
   /usr/local/include/Geant4/G4LogicalVolume.hh \
   /usr/local/include/Geant4/G4Region.hh \
   /usr/local/include/Geant4/G4GeomSplitter.hh \
@@ -984,8 +986,6 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: \
   /usr/local/include/Geant4/G4VReadOutGeometry.hh \
   /usr/local/include/Geant4/G4SensitiveVolumeList.hh \
   /usr/local/include/Geant4/G4VSDFilter.hh \
-  /usr/local/include/Geant4/G4Sphere.hh \
-  /usr/local/include/Geant4/G4Sphere.icc \
   /usr/local/include/Geant4/G4SystemOfUnits.hh \
   /usr/local/include/Geant4/G4Tubs.hh \
   /usr/local/include/Geant4/G4Tubs.icc \
@@ -1183,4 +1183,5 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: \
   /usr/local/include/Geant4/G4GenericFileManager.hh \
   /usr/local/include/Geant4/G4GenericFileManager.icc \
   /usr/local/include/Geant4/G4Neutron.hh \
-  /usr/local/include/Geant4/G4Ions.hh
+  /usr/local/include/Geant4/G4Ions.hh \
+  /usr/local/include/Geant4/G4Gamma.hh

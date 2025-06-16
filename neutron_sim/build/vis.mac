@@ -1,5 +1,10 @@
 /vis/drawVolume
 /vis/scene/add/trajectories
+
+/vis/modeling/trajectories/create/drawByParticleID
+/vis/modeling/trajectories/drawByParticleID-0/set neutron red  # Example: set neutron color to green
+/vis/modeling/trajectories/drawByParticleID-0/set default off  # Turn off other particles by default
+
 /tracking/storeTrajectory 1
 /vis/modeling/trajectories/create/drawByCharge
 /vis/scene/endOfEventAction accumulate

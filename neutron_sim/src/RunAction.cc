@@ -10,11 +10,8 @@
 RunAction::RunAction()
 {
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->CreateH1("neutronD", "Energy deposited by neutrons", 1200, 0, 1200 * keV);
-    analysisManager->CreateH1("neutronE", "Energy of neutrons", 100, 0, 1000 * keV);
-    // analysisManager->CreateH2("Edep", "Energy deposited by neutrons",
-    //                             420, 0., 420*keV,
-    //                             50, 1., 10.*MeV);
+    analysisManager->CreateH1("neutronD", "Energy deposited by gammas", 140, 0, 700 * keV);
+    // analysisManager->CreateH1("neutronE", "Energy of neutrons", 1000, 0, 1000 * keV);
 }
 
 RunAction::~RunAction() {}

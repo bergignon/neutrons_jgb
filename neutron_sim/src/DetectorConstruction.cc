@@ -58,8 +58,11 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
                             0. * cm, TARGET_RADIUS, TARGET_HEIGHT / 2,
                             0 * deg, 360. * deg);
 
+  G4NistManager *manager = G4NistManager::Instance();
+  G4Material *lead = manager->FindOrBuildMaterial("G4_Pb");
+
   logicalTarget_ = new G4LogicalVolume(solidTarget_,
-                                       targetMaterial_,
+                                       lead,
                                        "logicalTarget");
 
   G4RotationMatrix *rotation = new G4RotationMatrix();
@@ -97,12 +100,14 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
   // Overlaps checking
   scoringVolume_ = logicalTarget_;
 
-  solidDetector_ = new G4Box("solidDetector", WORLD_RADIUS / 4, WORLD_RADIUS / 4, 1. * mm);
+  G4Box *detectorBox = new G4Box("solidBox", WORLD_RADIUS / 3 - 2 * mm, WORLD_RADIUS / 2 - 2 * mm, WORLD_RADIUS - 2 * mm);
+
+  solidDetector_ = new G4SubtractionSolid("solidDetector", solidWorld_, detectorBox);
 
   logicalDetector_ = new G4LogicalVolume(solidDetector_, worldMaterial_, "logicalDetector");
 
   physicalDetector_ = new G4PVPlacement(0,
-                                        G4ThreeVector(0, 0, TARGET_POS_SHIFT + 10 * cm),
+                                        G4ThreeVector(0, 0, 0),
                                         logicalDetector_,
                                         "physicalDetector",
                                         logicalWorld_, false, 0, true);

@@ -9,8 +9,8 @@ filename = 'build/output_h1_neutronD.csv'
 bin_counts = []
 bin_edges = []
 bin_start = 0
-bin_end = 1200
-num_bins = 1200
+bin_end = 700
+num_bins = 140
 
 with open(filename, 'r') as file:
     lines = file.readlines()
@@ -51,11 +51,11 @@ plt.hist(
 
 
 print("Total number of events : ", total_events, "/200000")
-plt.xticks(np.arange(0, 1200, 100))
+plt.xticks(np.arange(0, 701, 50))
 plt.title('')
 plt.xlabel('Energy (keV)')  
 plt.ylabel('Count')
-plt.yscale('log')
+# plt.yscale('log')
 plt.grid(True)
 plt.tight_layout()
 plt.show()

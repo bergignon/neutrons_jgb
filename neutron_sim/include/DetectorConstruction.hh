@@ -4,6 +4,7 @@
 
 // Inclusion de bibliothèques Geant4
 #include "G4Box.hh"
+#include "G4Sphere.hh"
 #include "G4LogicalVolume.hh"
 #include "G4Material.hh"
 #include "G4NistManager.hh"
@@ -49,7 +50,7 @@ private:
 
     // Solid volumes
     G4Box *solidWorld_;
-    G4Box *solidDetector_;
+    G4SubtractionSolid *solidDetector_;
     G4Tubs *solidTarget_;
     G4Tubs *solidCasing_;
     G4SubtractionSolid *hollowCasing_;
