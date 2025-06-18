@@ -6,12 +6,19 @@
 #include "G4ios.hh" // for G4cout
 #include "G4AnalysisManager.hh"
 #include "G4Gamma.hh"
+#include "G4OpticalPhoton.hh"
+#include "G4VProcess.hh"
 
-TrackingAction::TrackingAction() {}
+TrackingAction::TrackingAction(EventAction *eventAction)
+{
+    eventAction_ = eventAction;
+}
 
 TrackingAction::~TrackingAction() {}
 
-void TrackingAction::PreUserTrackingAction(const G4Track *) {}
+void TrackingAction::PreUserTrackingAction(const G4Track *aTrack)
+{
+}
 
 void TrackingAction::PostUserTrackingAction(const G4Track *track)
 {

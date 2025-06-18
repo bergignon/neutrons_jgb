@@ -1,9 +1,0 @@
-{
-	"InstallScripts" : 
-	[
-		"/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/testSSLG4Ex/build/cmake_install.cmake",
-		"/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/testSSLG4Ex/build/OPSim/cmake_install.cmake",
-		"/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/testSSLG4Ex/build/sslg4/cmake_install.cmake"
-	],
-	"Parallel" : false
-}

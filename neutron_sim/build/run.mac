@@ -2,17 +2,17 @@
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
 /gps/energy 662 keV
-#/run/setCutForAGivenParticle proton 1 um
 
 # Debugging 
-# /tracking/verbose 3
+#/tracking/verbose 3
+/run/printProgress 100
 
 # Define the zone where the neutrons will be shot
 /gps/ang/type iso
 /gps/ang/mintheta 178.545001 deg
 
 # For single energy Runs
-/run/beamOn 1000000
+/run/beamOn 100000
 
 # Runs with different particle energies
 #/control/loop loop.mac particleEnergy 1. 10. 0.2

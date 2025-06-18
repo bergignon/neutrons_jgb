@@ -1,7 +1,0 @@
-/vis/drawVolume
-/vis/scene/add/trajectories
-/tracking/storeTrajectory 1
-/vis/modeling/trajectories/create/drawByCharge
-/vis/scene/endOfEventAction accumulate
-/vis/viewer/set/autoRefresh true
-/vis/open VTK

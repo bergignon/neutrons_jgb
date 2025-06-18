@@ -1052,4 +1052,7 @@ CMakeFiles/neutron_sim.dir/src/Action.cc.o: \
   /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/include/SteppingAction.hh \
   /usr/local/include/Geant4/G4UserSteppingAction.hh \
   /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/include/TrackingAction.hh \
-  /usr/local/include/Geant4/G4UserTrackingAction.hh
+  /usr/local/include/Geant4/G4UserTrackingAction.hh \
+  /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/include/StackingAction.hh \
+  /usr/local/include/Geant4/G4UserStackingAction.hh \
+  /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh
