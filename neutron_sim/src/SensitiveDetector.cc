@@ -17,12 +17,12 @@ G4bool SensitiveDetector::ProcessHits(G4Step *step, G4TouchableHistory *)
      *
      */
 
-    auto track = step->GetTrack();
-    if (track->GetDefinition() == G4Neutron::Definition())
-    {
-        auto analysisManager = G4AnalysisManager::Instance();
-        analysisManager->FillH1(1, track->GetKineticEnergy());
-        G4cout << "HIT !" << G4endl;
-    }
+    // auto track = step->GetTrack();
+    // if (track->GetDefinition() == G4Neutron::Definition())
+    // {
+    //     auto analysisManager = G4AnalysisManager::Instance();
+    //     analysisManager->FillH1(1, track->GetKineticEnergy());
+    //     G4cout << "HIT !" << G4endl;
+    // }
     return true;
 }

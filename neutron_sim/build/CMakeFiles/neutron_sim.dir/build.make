@@ -184,10 +184,24 @@ CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/SensitiveDetector.cc -o CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.s
 
+CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o: CMakeFiles/neutron_sim.dir/flags.make
+CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o: /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/StackingAction.cc
+CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o: CMakeFiles/neutron_sim.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o -MF CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o.d -o CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o -c /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/StackingAction.cc
+
+CMakeFiles/neutron_sim.dir/src/StackingAction.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/neutron_sim.dir/src/StackingAction.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/StackingAction.cc > CMakeFiles/neutron_sim.dir/src/StackingAction.cc.i
+
+CMakeFiles/neutron_sim.dir/src/StackingAction.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/neutron_sim.dir/src/StackingAction.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/StackingAction.cc -o CMakeFiles/neutron_sim.dir/src/StackingAction.cc.s
+
 CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: CMakeFiles/neutron_sim.dir/flags.make
 CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/SteppingAction.cc
 CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: CMakeFiles/neutron_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o -MF CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o.d -o CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o -c /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/SteppingAction.cc
 
 CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.i: cmake_force
@@ -201,7 +215,7 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.s: cmake_force
 CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o: CMakeFiles/neutron_sim.dir/flags.make
 CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o: /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/TrackingAction.cc
 CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o: CMakeFiles/neutron_sim.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o -MF CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o.d -o CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o -c /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/src/TrackingAction.cc
 
 CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.i: cmake_force
@@ -222,6 +236,7 @@ neutron_sim_OBJECTS = \
 "CMakeFiles/neutron_sim.dir/src/PhysicsList.cc.o" \
 "CMakeFiles/neutron_sim.dir/src/RunAction.cc.o" \
 "CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.o" \
+"CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o" \
 "CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o" \
 "CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o"
 
@@ -236,6 +251,7 @@ neutron_sim: CMakeFiles/neutron_sim.dir/src/Generator.cc.o
 neutron_sim: CMakeFiles/neutron_sim.dir/src/PhysicsList.cc.o
 neutron_sim: CMakeFiles/neutron_sim.dir/src/RunAction.cc.o
 neutron_sim: CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.o
+neutron_sim: CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o
 neutron_sim: CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o
 neutron_sim: CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o
 neutron_sim: CMakeFiles/neutron_sim.dir/build.make
@@ -274,7 +290,7 @@ neutron_sim: /usr/local/lib/libG4global.dylib
 neutron_sim: /usr/local/lib/libG4clhep.dylib
 neutron_sim: /usr/local/lib/libG4ptl.3.0.0.dylib
 neutron_sim: CMakeFiles/neutron_sim.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable neutron_sim"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable neutron_sim"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neutron_sim.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

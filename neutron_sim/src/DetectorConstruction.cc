@@ -1,5 +1,6 @@
 #include "DetectorConstruction.hh"
 #include "G4tgbVolumeMgr.hh"
+#include "G4MaterialPropertiesTable.hh"
 
 const G4double WORLD_RADIUS = 1.2 * m;
 const G4double TARGET_RADIUS = 2.54 * cm;
@@ -23,10 +24,21 @@ void DetectorConstruction::defineMaterials()
 
   G4double density = 0.959 * g / cm3;
   G4Material *EJ309 = new G4Material("EJ309", density, 2, kStateLiquid, 293.15 * kelvin, 1 * atmosphere);
-  EJ309->AddElement(elH, 0.5552);
-  EJ309->AddElement(elC, 0.4447);
-
+  EJ309->AddElement(elH, 0.0948);
+  EJ309->AddElement(elC, 0.9052);
   targetMaterial_ = EJ309;
+
+  G4MaterialPropertiesTable *EJ309_MPT = new G4MaterialPropertiesTable();
+
+  G4double photonEnergy[2] = {200, 800};
+  G4double rIndex[2] = {1.57, 1.57};
+  G4double absLength[2] = {100.0, 100.0};
+
+  // EJ309_MPT->AddProperty("RINDEX", photonEnergy, rIndex, 2);
+  EJ309_MPT->AddProperty("ABSLENGTH", photonEnergy, absLength, 2);
+  EJ309_MPT->AddConstProperty("SCINTILLATIONYIELD", 12300.0 / MeV);
+
+  EJ309->SetMaterialPropertiesTable(EJ309_MPT);
 }
 
 G4VPhysicalVolume *DetectorConstruction::Construct()
@@ -60,9 +72,10 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
 
   G4NistManager *manager = G4NistManager::Instance();
   G4Material *lead = manager->FindOrBuildMaterial("G4_Pb");
+  G4Material *NaI = manager->FindOrBuildMaterial("G4_SODIUM_IODIDE");
 
   logicalTarget_ = new G4LogicalVolume(solidTarget_,
-                                       lead,
+                                       targetMaterial_,
                                        "logicalTarget");
 
   G4RotationMatrix *rotation = new G4RotationMatrix();
@@ -97,6 +110,7 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
                                       false,                                   // No boolean operation
                                       0,                                       // Copy number
                                       true);
+
   // Overlaps checking
   scoringVolume_ = logicalTarget_;
 

@@ -2,6 +2,7 @@
 #include "EventAction.hh"
 #include "SteppingAction.hh"
 #include "TrackingAction.hh"
+#include "StackingAction.hh"
 
 ActionInitialization::ActionInitialization() {}
 
@@ -19,7 +20,8 @@ void ActionInitialization::Build() const
   SetUserAction(eventAction);
 
   SetUserAction(new SteppingAction(eventAction));
-  SetUserAction(new TrackingAction());
+  SetUserAction(new TrackingAction(eventAction));
+  SetUserAction(new StackingAction(eventAction));
 }
 
 void ActionInitialization::BuildForMaster() const

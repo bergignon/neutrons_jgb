@@ -28,11 +28,11 @@ int main(int argc, char **argv)
   G4Random::setTheSeed(seed);
 
   // #ifdef G4MULTITHREADED
-  // auto runManager = new G4MTRunManager();
-  // runManager->SetNumberOfThreads(G4Threading::G4GetNumberOfCores());
+  auto runManager = new G4MTRunManager();
+  runManager->SetNumberOfThreads(G4Threading::G4GetNumberOfCores());
   // / #else
 
-  auto runManager = new G4RunManager();
+  // auto runManager = new G4RunManager();
 
   runManager->SetUserInitialization(new DetectorConstruction());
   runManager->SetUserInitialization(new PhysicsList());

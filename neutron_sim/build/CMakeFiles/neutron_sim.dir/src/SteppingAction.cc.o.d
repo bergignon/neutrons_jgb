@@ -1184,4 +1184,5 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: \
   /usr/local/include/Geant4/G4GenericFileManager.icc \
   /usr/local/include/Geant4/G4Neutron.hh \
   /usr/local/include/Geant4/G4Ions.hh \
-  /usr/local/include/Geant4/G4Gamma.hh
+  /usr/local/include/Geant4/G4Gamma.hh \
+  /usr/local/include/Geant4/G4OpticalPhoton.hh

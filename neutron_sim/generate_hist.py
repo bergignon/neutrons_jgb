@@ -1,124 +1,63 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-from matplotlib import cm
 
-# filename = 'testSSLG4Ex/build/output_h1_Edep.csv'
-filename = 'build/output_h1_neutronD.csv'
+filenames = {
+    # "EJ-309":'output/g662edep-ej-270-700.csv',
+    # 'Pb': 'output/g662edep-pb70-700.csv',
+    # 'NaI': 'output/g662edep-nai70-700.csv'
+    "EJ-NEUTRON" : "output/output_h1_neutronD.csv"
+}
 
-bin_counts = []
-bin_edges = []
 bin_start = 0
 bin_end = 700
-num_bins = 140
-
-with open(filename, 'r') as file:
-    lines = file.readlines()
-
-data_lines = []
-data_started = False
-for line in lines:
-    line = line.strip()
-    if not data_started:
-        if line.startswith('entries'):
-            data_started = True
-        continue
-    if line:
-        data_lines.append(line)
-
-
-for line in data_lines[:num_bins]:  
-    values = line.split(',')
-    entries = float(values[0])
-    bin_counts.append(entries)
-
+num_bins = 70
 bin_edges = np.linspace(bin_start, bin_end, num_bins + 1)
-# bin_width = bin_edges[1] - bin_edges[0]
 
-total_events = sum(bin_counts)
-# normalized_counts = np.array(bin_counts) / (total_events * bin_width)
+# Plot configuration
+plt.figure(figsize=(10, 6))
 
+# Loop through each file and plot its histogram
+for label, filename in filenames.items():
+    bin_counts = []
+    
+    with open(filename, 'r') as file:
+        lines = file.readlines()
 
-plt.figure(figsize=(8, 5))
-plt.hist(
-    bin_edges[:-1],
-    bins=bin_edges,
-    weights=bin_counts,
-    histtype='stepfilled',
-    edgecolor='black',
-    color='mediumseagreen'
-)
+    # Skip header lines and start after "entries"
+    data_started = False
+    for line in lines:
+        line = line.strip()
+        if not data_started:
+            if line.startswith('entries'):
+                data_started = True
+            continue
+        if line:
+            values = line.split(',')
+            entries = float(values[0])
+            bin_counts.append(entries)
 
+    bin_counts = bin_counts[:num_bins]
 
-print("Total number of events : ", total_events, "/200000")
+    # Normalize if needed:
+    # bin_width = bin_edges[1] - bin_edges[0]
+    # total_events = sum(bin_counts)
+    # normalized_counts = np.array(bin_counts) / (total_events * bin_width)
+
+    plt.hist(
+        bin_edges[:-1],
+        bins=bin_edges,
+        weights=bin_counts,
+        histtype='step',
+        label=label,
+        linewidth=1.5
+    )
+
+plt.title('Energy Deposited by Gammas')
+plt.xlabel('Energy (keV)')
+plt.ylabel('Counts')
+# plt.yscale("log")
 plt.xticks(np.arange(0, 701, 50))
-plt.title('')
-plt.xlabel('Energy (keV)')  
-plt.ylabel('Count')
-# plt.yscale('log')
 plt.grid(True)
+plt.legend()
 plt.tight_layout()
 plt.show()
-
-
-############### FOR 2D HIST ###############
-
-# filename = 'build/output_h2_Edep.csv'
-
-# x_bins = 420
-# x_min = 0
-# x_max = 0.42
-
-# y_bins = 50
-# y_min = 1
-# y_max = 10
-
-# # This is necessary to include the geant4 overflow bins so the different 
-# # bin numbers match
-# full_x_bins = x_bins + 2
-# full_y_bins = y_bins + 2
-
-# with open(filename, 'r') as file:
-#     lines = file.readlines()
-
-# data_lines = []
-# data_started = False
-# for line in lines:
-#     line = line.strip()
-#     if not data_started:
-#         if line.startswith('entries'):
-#             data_started = True
-#         continue
-#     if line:
-#         data_lines.append(line)
-
-# if len(data_lines) != full_x_bins * full_y_bins:
-#     raise ValueError(f"Expected {full_x_bins * full_y_bins} bins, got {len(data_lines)}")
-
-# hist_full = np.zeros((full_y_bins, full_x_bins))
-# for idx, line in enumerate(data_lines):
-#     y_idx = idx // full_x_bins
-#     x_idx = idx % full_x_bins
-#     entries = float(line.split(',')[0])
-#     hist_full[y_idx, x_idx] = entries
-
-# hist_core = hist_full[1:-1, 1:-1]
-
-# x_centers = np.linspace(x_min, x_max, x_bins)
-# y_centers = np.linspace(y_min, y_max, y_bins)
-# X, Y = np.meshgrid(x_centers, y_centers)
-
-# Z = hist_core  
-
-# fig = plt.figure(figsize=(12, 7))
-# ax = fig.add_subplot(111, projection='3d')
-
-# surf = ax.plot_surface(X, Y, Z, cmap=cm.viridis, edgecolor='k', linewidth=0.1, antialiased=True)
-
-# ax.set_title('Energy Deposited by Neutrons')
-# ax.set_xlabel('Energy deposited')
-# ax.set_ylabel('Particle Energy')
-# ax.set_zlabel('Count')
-
-# plt.tight_layout()
-# plt.show()

@@ -1,6 +1,0 @@
-set(__QT_DEPLOY_TARGET_OPSim_FILE /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/testSSLG4Ex/build/OPSim/libOPSim.dylib)
-set(__QT_DEPLOY_TARGET_OPSim_TYPE SHARED_LIBRARY)
-set(__QT_DEPLOY_TARGET_sslg4_FILE /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/testSSLG4Ex/build/sslg4/libsslg4.dylib)
-set(__QT_DEPLOY_TARGET_sslg4_TYPE SHARED_LIBRARY)
-set(__QT_DEPLOY_TARGET_main_FILE /Users/jeangabrielbergeron/Documents/log/INRS/neutrons_jgb/neutron_sim/testSSLG4Ex/build/main)
-set(__QT_DEPLOY_TARGET_main_TYPE EXECUTABLE)
