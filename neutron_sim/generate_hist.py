@@ -5,7 +5,9 @@ filenames = {
     # "EJ-309":'output/g662edep-ej-270-700.csv',
     # 'Pb': 'output/g662edep-pb70-700.csv',
     # 'NaI': 'output/g662edep-nai70-700.csv'
-    "EJ-NEUTRON" : "output/output_h1_neutronD.csv"
+    "Edep" : "build/output_h1_nd.csv",
+    "nPhotons" : "build/output_h1_np.csv",
+    "nPhotons/12.3 keV": "build/output_h1_ed.csv"
 }
 
 bin_start = 0

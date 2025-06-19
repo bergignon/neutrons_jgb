@@ -26,8 +26,8 @@ SteppingAction::~SteppingAction()
 }
 
 void SteppingAction::UserSteppingAction(const G4Step *step)
-{\
-  G4ParticleDefinition* particleDef = step->GetTrack()->GetDefinition();
+{
+  G4ParticleDefinition *particleDef = step->GetTrack()->GetDefinition();
   if (particleDef == G4OpticalPhoton::OpticalPhotonDefinition())
     return;
   /*
@@ -86,4 +86,15 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
    *    THIS SECTION IS FOR SECONDARY PARTICLE ANALYSIS
    *
    */
+
+  // const std::vector<const G4Track *> *secondaries = step->GetSecondaryInCurrentStep();
+  // if (!secondaries->empty())
+  // {
+  //   G4cout << "Secondaries in this step:" << G4endl;
+  //   for (const auto &secondary : *secondaries)
+  //   {
+  //     G4String name = secondary->GetDefinition()->GetParticleName();
+  //     G4cout << "  - " << name << G4endl;
+  //   }
+  // }
 }

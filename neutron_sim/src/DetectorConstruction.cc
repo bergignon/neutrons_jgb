@@ -30,13 +30,46 @@ void DetectorConstruction::defineMaterials()
 
   G4MaterialPropertiesTable *EJ309_MPT = new G4MaterialPropertiesTable();
 
-  G4double photonEnergy[2] = {200, 800};
+  G4double photonEnergy[2] = {1.549 * eV, 6.199 * eV};
   G4double rIndex[2] = {1.57, 1.57};
   G4double absLength[2] = {100.0, 100.0};
 
-  // EJ309_MPT->AddProperty("RINDEX", photonEnergy, rIndex, 2);
+  G4double photonWavelength[77] = {
+      525.000, 523.026, 521.053, 519.079, 517.105, 515.132, 513.158, 511.184, 509.211,
+      507.237, 505.263, 503.289, 501.316, 499.342, 497.368, 495.395, 493.421, 491.447,
+      489.474, 487.500, 485.526, 483.553, 481.579, 479.605, 477.632, 475.658, 473.684,
+      471.711, 469.737, 467.763, 465.789, 463.816, 461.842, 459.868, 457.895, 455.921,
+      453.947, 451.974, 450.000, 448.026, 446.053, 444.079, 442.105, 440.132, 438.158,
+      436.184, 434.211, 432.237, 430.263, 428.289, 426.316, 424.342, 422.368, 420.395,
+      418.421, 416.447, 414.474, 412.500, 410.526, 408.553, 406.579, 404.605, 402.632,
+      400.658, 398.684, 396.711, 394.737, 392.763, 390.789, 388.816, 386.842, 384.868,
+      382.895, 380.921, 378.947, 376.974, 375.000};
+
+  G4double intensity[77] = {
+      0.000, 0.017, 0.056, 0.117, 0.196, 0.296, 0.380, 0.475, 0.553,
+      0.615, 0.654, 0.670, 0.682, 0.693, 0.709, 0.726, 0.760, 0.799,
+      0.855, 0.899, 0.933, 0.966, 0.989, 1.000, 0.989, 0.955, 0.899,
+      0.849, 0.804, 0.788, 0.777, 0.765, 0.760, 0.754, 0.737, 0.715,
+      0.687, 0.659, 0.631, 0.603, 0.575, 0.547, 0.520, 0.503, 0.486,
+      0.469, 0.453, 0.436, 0.419, 0.402, 0.385, 0.363, 0.346, 0.330,
+      0.313, 0.296, 0.279, 0.263, 0.246, 0.223, 0.207, 0.190, 0.173,
+      0.162, 0.151, 0.140, 0.128, 0.117, 0.106, 0.095, 0.089, 0.084,
+      0.073, 0.073, 0.067, 0.061, 0.050};
+
+  for (int i = 0; i < 77; i++)
+  {
+    photonWavelength[i] = 1239.8 / photonWavelength[i];
+  }
+
+  EJ309_MPT->AddProperty("RINDEX", photonEnergy, rIndex, 2);
   EJ309_MPT->AddProperty("ABSLENGTH", photonEnergy, absLength, 2);
+  EJ309_MPT->AddProperty("SCINTILLATIONCOMPONENT1", photonWavelength, intensity, 77);
+
   EJ309_MPT->AddConstProperty("SCINTILLATIONYIELD", 12300.0 / MeV);
+  EJ309_MPT->AddConstProperty("SCINTILLATIONYIELD1", 1);
+  EJ309_MPT->AddConstProperty("RESOLUTIONSCALE", 1.0);
+  EJ309_MPT->AddConstProperty("SCINTILLATIONTIMECONSTANT1", 3.5 * ns);
+  EJ309_MPT->AddConstProperty("SCINTILLATIONRISETIME1", 1.0 * ns);
 
   EJ309->SetMaterialPropertiesTable(EJ309_MPT);
 }
