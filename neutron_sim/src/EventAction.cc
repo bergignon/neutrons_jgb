@@ -17,11 +17,14 @@ void EventAction::BeginOfEventAction(const G4Event *event)
 
 void EventAction::EndOfEventAction(const G4Event *event)
 {
-  G4cout << "Energy deposit of : " << totalEDeposited_ << " MeV" << G4endl;
+  // G4cout << "Energy deposit of : " << totalEDeposited_ << " MeV" << G4endl;
+  // G4cout << "Scintillation photons : " << nScintillationPhotons_ << G4endl;
   auto analysisManager = G4AnalysisManager::Instance();
   if (totalEDeposited_ != 0)
   {
     analysisManager->FillH1(0, totalEDeposited_);
+    analysisManager->FillH1(1, nScintillationPhotons_);
+    analysisManager->FillH1(2, nScintillationPhotons_ / 12.3 * keV);
   }
 }
 

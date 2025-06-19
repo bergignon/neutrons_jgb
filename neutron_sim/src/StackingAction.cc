@@ -23,7 +23,7 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(
             if (aTrack->GetCreatorProcess()->GetProcessName() == "Scintillation")
             {
                 eventAction_->incrementPhotonCount();
-                G4cout << "Scintillation photon" << G4endl;
+                // G4cout << "Scintillation photon" << G4endl;
             }
         }
     }
