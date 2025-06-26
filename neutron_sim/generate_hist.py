@@ -6,13 +6,13 @@ filenames = {
     # 'Pb': 'output/g662edep-pb70-700.csv',
     # 'NaI': 'output/g662edep-nai70-700.csv'
     "Edep" : "build/output_h1_nd.csv",
-    "nPhotons" : "build/output_h1_np.csv",
-    "nPhotons/12.3 keV": "build/output_h1_ed.csv"
+    # "nPhotons" : "build/output_h1_np.csv",
+    "nPhotons" : "build/output_h1_npc.csv"
 }
 
 bin_start = 0
 bin_end = 700
-num_bins = 70
+num_bins = 140
 bin_edges = np.linspace(bin_start, bin_end, num_bins + 1)
 
 # Plot configuration
@@ -54,11 +54,11 @@ for label, filename in filenames.items():
         linewidth=1.5
     )
 
-plt.title('Energy Deposited by Gammas')
+plt.title('')
 plt.xlabel('Energy (keV)')
-plt.ylabel('Counts')
+plt.ylabel('Count')
 # plt.yscale("log")
-plt.xticks(np.arange(0, 701, 50))
+plt.xticks(np.arange(0, 700, 100))
 plt.grid(True)
 plt.legend()
 plt.tight_layout()

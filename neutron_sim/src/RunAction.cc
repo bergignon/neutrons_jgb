@@ -10,9 +10,9 @@
 RunAction::RunAction()
 {
     auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->CreateH1("nd", "Energy deposited by gammas", 70, 0, 700 * keV);
-    analysisManager->CreateH1("np", "Number of photons", 70, 0, 8610);
-    analysisManager->CreateH1("ed", "Energy deposited by gammas by photons", 70, 0, 700 * keV);
+    analysisManager->CreateH1("nd", "Energy deposited by gammas", 140, 0, 700 * keV);
+    analysisManager->CreateH1("np", "Number of scintillation photons", 140, 0, 700 * keV);
+    analysisManager->CreateH1("npc", "Number of scintillation + cerenkov photons", 140, 0, 700 * keV);
 }
 
 RunAction::~RunAction() {}

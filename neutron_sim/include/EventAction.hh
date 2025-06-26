@@ -17,11 +17,13 @@ public:
 
   void AddEDeposit(G4double eDeposit);
   void incrementPhotonCount();
+  void incrementCherenkov();
 
 private:
   RunAction *runAction_ = nullptr;
   G4double totalEDeposited_ = 0.;
   G4int nScintillationPhotons_ = 0;
+  G4int scintillationPlusCherenkov_ = 0;
   // G4double   particleEnergy_  = 0.;
 };
 

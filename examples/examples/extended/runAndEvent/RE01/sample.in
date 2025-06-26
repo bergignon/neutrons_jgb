@@ -1,8 +1,0 @@
-/control/verbose 1
-#
-/mydet/generator PYTHIA
-#
-/run/beamOn 1
-#
-exit
-
