@@ -23,7 +23,12 @@ G4ClassificationOfNewTrack StackingAction::ClassifyNewTrack(
             if (aTrack->GetCreatorProcess()->GetProcessName() == "Scintillation")
             {
                 eventAction_->incrementPhotonCount();
+                eventAction_->incrementCherenkov();
                 // G4cout << "Scintillation photon" << G4endl;
+            }
+            if (aTrack->GetCreatorProcess()->GetProcessName() == "Cerenkov")
+            {
+                eventAction_->incrementCherenkov();
             }
         }
     }
