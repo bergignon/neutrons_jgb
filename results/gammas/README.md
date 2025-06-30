@@ -11,3 +11,7 @@ computed based on the number of scintillation and Cerenkov photons created.
 
 The "data.csv" files are stripped versions of the "edep.csv" files where the first value
 is the upper bound of the histogram bin (the bins are 5 keV) and the second value is the count
+
+The "run.mac" files are the macro files that were used to run the simulation. Note that the only thing that changes is the gamma energy
+
+The plots compare the energy deposit value (label: edep) and the edep value computed by using the number of photons (label: nPhotons)

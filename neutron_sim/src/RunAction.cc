@@ -9,18 +9,19 @@
 
 RunAction::RunAction()
 {
-    auto analysisManager = G4AnalysisManager::Instance();
-    analysisManager->CreateH1("nd", "Energy deposited by gammas", 140, 0, 700 * keV);
-    analysisManager->CreateH1("np", "Number of scintillation photons", 140, 0, 700 * keV);
-    analysisManager->CreateH1("npc", "Number of scintillation + cerenkov photons", 140, 0, 700 * keV);
+    // auto analysisManager = G4AnalysisManager::Instance();
+    // analysisManager->CreateH1("nd", "Energy deposited by gammas", 200, 0, 2000 * keV);
+    // analysisManager->CreateH1("np", "Number of scintillation photons", 240, 0, 1200 * keV);
+    // analysisManager->CreateH1("npc", "Number of scintillation + cerenkov photons", 200, 0, 2000 * keV);
 }
 
 RunAction::~RunAction() {}
 
-void RunAction::BeginOfRunAction(const G4Run *)
+void RunAction::BeginOfRunAction(const G4Run *run)
 {
     auto analysisManager = G4AnalysisManager::Instance();
     analysisManager->OpenFile("output.csv");
+    analysisManager->CreateH1("nd" + to_string(run->GetRunID()), "Energy deposited by neutrons (%)", 300, 0, 150);
 }
 
 void RunAction::EndOfRunAction(const G4Run *run)

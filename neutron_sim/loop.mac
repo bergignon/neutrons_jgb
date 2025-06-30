@@ -1,2 +1,2 @@
 /gps/energy {particleEnergy} MeV
-/run/beamOn 10000
+/run/beamOn 100000
