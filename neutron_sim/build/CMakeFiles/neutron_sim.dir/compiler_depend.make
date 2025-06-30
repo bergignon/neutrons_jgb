@@ -6530,6 +6530,8 @@ CMakeFiles/neutron_sim.dir/src/PhysicsList.cc.o: /Users/jeangabrielbergeron/Docu
   /usr/local/include/Geant4/G4HadronElastic.hh \
   /usr/local/include/Geant4/G4HadronElasticPhysics.hh \
   /usr/local/include/Geant4/G4HadronElasticPhysicsHP.hh \
+  /usr/local/include/Geant4/G4HadronPhysicsQGSP_BERT.hh \
+  /usr/local/include/Geant4/G4HadronPhysicsQGSP_BERT_HP.hh \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC.hh \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC_ALLHP.hh \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC_HP.hh \
@@ -12229,6 +12231,10 @@ CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o: /Users/jeangabrielbergeron/D
 /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC_ALLHP.hh:
 
 /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC.hh:
+
+/usr/local/include/Geant4/G4HadronPhysicsQGSP_BERT_HP.hh:
+
+/usr/local/include/Geant4/G4HadronPhysicsQGSP_BERT.hh:
 
 /usr/local/include/Geant4/G4HadronElasticPhysics.hh:
 

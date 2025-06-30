@@ -2,17 +2,28 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 filenames = {
-    # "EJ-309":'output/g662edep-ej-270-700.csv',
-    # 'Pb': 'output/g662edep-pb70-700.csv',
-    # 'NaI': 'output/g662edep-nai70-700.csv'
-    "Edep" : "build/output_h1_nd.csv",
-    # "nPhotons" : "build/output_h1_np.csv",
-    "nPhotons" : "build/output_h1_npc.csv"
+    "1 MeV" : "build/output_h1_nd0.csv",
+    "2 MeV" : "build/output_h1_nd1.csv",
+    "3 MeV" : "build/output_h1_nd2.csv",
+    "4 MeV" : "build/output_h1_nd3.csv",
+    "5 MeV" : "build/output_h1_nd4.csv",
+    "6 MeV" : "build/output_h1_nd5.csv",
+    "7 MeV" : "build/output_h1_nd6.csv",
+    "8 MeV" : "build/output_h1_nd7.csv",
+    "9 MeV" : "build/output_h1_nd8.csv",
+    "10 MeV" : "build/output_h1_nd9.csv",
+    # "nPhotons->Edep" : "build/output_h1_npc.csv"
+    # "Air" : "../results/air.csv",
+    # "EJ-309" : "../results/ej.csv",
+    # "Lead" : "../results/lead.csv",
+    # "Nai" : "../results/nai.csv",
+    # "Polyethylene" : "../results/polyethylene.csv",
+    # "Vinyltoluene" : "../results/Vinyltoluene.csv"
 }
 
 bin_start = 0
-bin_end = 700
-num_bins = 140
+bin_end = 150
+num_bins = 300
 bin_edges = np.linspace(bin_start, bin_end, num_bins + 1)
 
 # Plot configuration
@@ -54,11 +65,11 @@ for label, filename in filenames.items():
         linewidth=1.5
     )
 
-plt.title('')
-plt.xlabel('Energy (keV)')
+plt.title('Energy deposited by neutrons')
+plt.xlabel('Percentage of incident energy')
 plt.ylabel('Count')
-# plt.yscale("log")
-plt.xticks(np.arange(0, 700, 100))
+plt.yscale("log")
+plt.xticks(np.arange(0, 150, 10))
 plt.grid(True)
 plt.legend()
 plt.tight_layout()

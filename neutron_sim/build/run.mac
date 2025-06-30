@@ -1,7 +1,7 @@
-/gps/particle gamma
+/gps/particle neutron
 /gps/number 1
 /gps/pos/centre 0.0 0.0 0.0
-/gps/energy 662 keV
+/gps/energy 1500 keV
 
 # Debugging 
 #/tracking/verbose 3
@@ -12,10 +12,10 @@
 /gps/ang/mintheta 178.545001 deg
 
 # For single energy Runs
-/run/beamOn 1000000
+#/run/beamOn 100000
 
 # Runs with different particle energies
-#/control/loop loop.mac particleEnergy 1. 10. 0.2
+/control/loop loop.mac particleEnergy 1. 10. 1
 
 /analysis/write
 /analysis/closeFile

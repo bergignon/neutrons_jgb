@@ -106,6 +106,9 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
   G4NistManager *manager = G4NistManager::Instance();
   G4Material *lead = manager->FindOrBuildMaterial("G4_Pb");
   G4Material *NaI = manager->FindOrBuildMaterial("G4_SODIUM_IODIDE");
+  G4Material *air = manager->FindOrBuildMaterial("G4_AIR");
+  G4Material *sc = manager->FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
+  G4Material *plastic = manager->FindOrBuildMaterial("G4_POLYETHYLENE");
 
   logicalTarget_ = new G4LogicalVolume(solidTarget_,
                                        targetMaterial_,

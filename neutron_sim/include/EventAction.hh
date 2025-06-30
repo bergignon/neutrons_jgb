@@ -24,7 +24,7 @@ private:
   G4double totalEDeposited_ = 0.;
   G4int nScintillationPhotons_ = 0;
   G4int scintillationPlusCherenkov_ = 0;
-  // G4double   particleEnergy_  = 0.;
+  G4double particleEnergy_ = 0.;
 };
 
 #endif
