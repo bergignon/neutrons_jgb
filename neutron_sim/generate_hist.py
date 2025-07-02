@@ -2,28 +2,21 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 filenames = {
-    "1 MeV" : "build/output_h1_nd0.csv",
-    "2 MeV" : "build/output_h1_nd1.csv",
-    "3 MeV" : "build/output_h1_nd2.csv",
-    "4 MeV" : "build/output_h1_nd3.csv",
-    "5 MeV" : "build/output_h1_nd4.csv",
-    "6 MeV" : "build/output_h1_nd5.csv",
-    "7 MeV" : "build/output_h1_nd6.csv",
-    "8 MeV" : "build/output_h1_nd7.csv",
-    "9 MeV" : "build/output_h1_nd8.csv",
-    "10 MeV" : "build/output_h1_nd9.csv",
-    # "nPhotons->Edep" : "build/output_h1_npc.csv"
-    # "Air" : "../results/air.csv",
-    # "EJ-309" : "../results/ej.csv",
-    # "Lead" : "../results/lead.csv",
-    # "Nai" : "../results/nai.csv",
-    # "Polyethylene" : "../results/polyethylene.csv",
-    # "Vinyltoluene" : "../results/Vinyltoluene.csv"
+    "6 MeV" : "build/output_h1_lo0.csv",
+    "8 MeV" : "build/output_h1_lo1.csv",
+    "10 MeV" : "build/output_h1_lo2.csv",
+    "12 MeV" : "build/output_h1_lo3.csv",
+    "14 MeV" : "build/output_h1_lo4.csv",
+    "16 MeV" : "build/output_h1_lo5.csv",
+    "18 MeV" : "build/output_h1_lo6.csv",
+    "20 MeV" : "build/output_h1_lo7.csv",
+    # "Energy of protons" : "build/output_h1_pe.csv",
+    # "Light output" : "build/output_h1_lo.csv"
 }
 
 bin_start = 0
-bin_end = 150
-num_bins = 300
+bin_end = 12
+num_bins = 1000
 bin_edges = np.linspace(bin_start, bin_end, num_bins + 1)
 
 # Plot configuration
@@ -53,7 +46,8 @@ for label, filename in filenames.items():
 
     # Normalize if needed:
     # bin_width = bin_edges[1] - bin_edges[0]
-    # total_events = sum(bin_counts)
+    total_events = sum(bin_counts)
+    print(total_events)
     # normalized_counts = np.array(bin_counts) / (total_events * bin_width)
 
     plt.hist(
@@ -65,11 +59,11 @@ for label, filename in filenames.items():
         linewidth=1.5
     )
 
-plt.title('Energy deposited by neutrons')
-plt.xlabel('Percentage of incident energy')
+plt.title('Light output distribution by neutron incident energy')
+plt.xlabel('Light output (MeVee)')
 plt.ylabel('Count')
 plt.yscale("log")
-plt.xticks(np.arange(0, 150, 10))
+plt.xticks(np.arange(0, 12, 0.5))
 plt.grid(True)
 plt.legend()
 plt.tight_layout()

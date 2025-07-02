@@ -379,30 +379,6 @@ src/SensitiveDetector.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/SensitiveDetector.cc.s
 .PHONY : src/SensitiveDetector.cc.s
 
-src/StackingAction.o: src/StackingAction.cc.o
-.PHONY : src/StackingAction.o
-
-# target to build an object file
-src/StackingAction.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/StackingAction.cc.o
-.PHONY : src/StackingAction.cc.o
-
-src/StackingAction.i: src/StackingAction.cc.i
-.PHONY : src/StackingAction.i
-
-# target to preprocess a source file
-src/StackingAction.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/StackingAction.cc.i
-.PHONY : src/StackingAction.cc.i
-
-src/StackingAction.s: src/StackingAction.cc.s
-.PHONY : src/StackingAction.s
-
-# target to generate assembly for a file
-src/StackingAction.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/StackingAction.cc.s
-.PHONY : src/StackingAction.cc.s
-
 src/SteppingAction.o: src/SteppingAction.cc.o
 .PHONY : src/SteppingAction.o
 
@@ -426,30 +402,6 @@ src/SteppingAction.s: src/SteppingAction.cc.s
 src/SteppingAction.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.s
 .PHONY : src/SteppingAction.cc.s
-
-src/TrackingAction.o: src/TrackingAction.cc.o
-.PHONY : src/TrackingAction.o
-
-# target to build an object file
-src/TrackingAction.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.o
-.PHONY : src/TrackingAction.cc.o
-
-src/TrackingAction.i: src/TrackingAction.cc.i
-.PHONY : src/TrackingAction.i
-
-# target to preprocess a source file
-src/TrackingAction.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.i
-.PHONY : src/TrackingAction.cc.i
-
-src/TrackingAction.s: src/TrackingAction.cc.s
-.PHONY : src/TrackingAction.s
-
-# target to generate assembly for a file
-src/TrackingAction.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/neutron_sim.dir/build.make CMakeFiles/neutron_sim.dir/src/TrackingAction.cc.s
-.PHONY : src/TrackingAction.cc.s
 
 # Help Target
 help:
@@ -489,15 +441,9 @@ help:
 	@echo "... src/SensitiveDetector.o"
 	@echo "... src/SensitiveDetector.i"
 	@echo "... src/SensitiveDetector.s"
-	@echo "... src/StackingAction.o"
-	@echo "... src/StackingAction.i"
-	@echo "... src/StackingAction.s"
 	@echo "... src/SteppingAction.o"
 	@echo "... src/SteppingAction.i"
 	@echo "... src/SteppingAction.s"
-	@echo "... src/TrackingAction.o"
-	@echo "... src/TrackingAction.i"
-	@echo "... src/TrackingAction.s"
 .PHONY : help
 
 

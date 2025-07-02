@@ -11,6 +11,7 @@ EventAction::EventAction(RunAction *runAction) : runAction_(runAction) {}
 void EventAction::BeginOfEventAction(const G4Event *event)
 {
   totalEDeposited_ = 0.;
+  totalLightOutput_ = 0.;
   nScintillationPhotons_ = 0;
   scintillationPlusCherenkov_ = 0;
   particleEnergy_ = event->GetPrimaryVertex()->GetPrimary()->GetKineticEnergy();
@@ -24,15 +25,20 @@ void EventAction::EndOfEventAction(const G4Event *event)
   auto analysisManager = G4AnalysisManager::Instance();
   if (totalEDeposited_ != 0)
   {
-    analysisManager->FillH1(runID, totalEDeposited_ / particleEnergy_ * 100);
-    // analysisManager->FillH1(1, nScintillationPhotons_ / 12.3 * keV);
-    // analysisManager->FillH1(2, scintillationPlusCherenkov_ / 12.3 * keV);
+    // analysisManager->FillH1(runID, totalEDeposited_ / particleEnergy_ * 100);
+    // analysisManager->FillH1(runID, scintillationPlusCherenkov_ / 12.3 * keV / particleEnergy_ * 100);
+    analysisManager->FillH1(runID, totalLightOutput_);
   }
 }
 
 void EventAction::AddEDeposit(G4double eDeposit)
 {
   totalEDeposited_ += eDeposit;
+}
+
+void EventAction::AddLightOutput(G4double lightEnergy)
+{
+  totalLightOutput_ += lightEnergy;
 }
 
 void EventAction::incrementPhotonCount()

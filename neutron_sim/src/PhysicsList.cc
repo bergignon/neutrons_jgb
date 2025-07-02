@@ -39,7 +39,7 @@ PhysicsList::PhysicsList() : G4VModularPhysicsList()
     RegisterPhysics(new G4IonElasticPhysics(0));
     RegisterPhysics(new G4IonPhysics(0));
 
-    RegisterPhysics(new G4OpticalPhysics(0));
+    // RegisterPhysics(new G4OpticalPhysics(0));
 }
 
 PhysicsList::~PhysicsList() {}
