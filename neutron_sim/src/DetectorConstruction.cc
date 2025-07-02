@@ -26,7 +26,6 @@ void DetectorConstruction::defineMaterials()
   G4Material *EJ309 = new G4Material("EJ309", density, 2, kStateLiquid, 293.15 * kelvin, 1 * atmosphere);
   EJ309->AddElement(elH, 0.0948);
   EJ309->AddElement(elC, 0.9052);
-  targetMaterial_ = EJ309;
 
   G4MaterialPropertiesTable *EJ309_MPT = new G4MaterialPropertiesTable();
 
@@ -72,6 +71,7 @@ void DetectorConstruction::defineMaterials()
   EJ309_MPT->AddConstProperty("SCINTILLATIONRISETIME1", 1.0 * ns);
 
   EJ309->SetMaterialPropertiesTable(EJ309_MPT);
+  targetMaterial_ = EJ309;
 }
 
 G4VPhysicalVolume *DetectorConstruction::Construct()
@@ -102,13 +102,6 @@ G4VPhysicalVolume *DetectorConstruction::Construct()
   solidTarget_ = new G4Tubs("solidTarget",
                             0. * cm, TARGET_RADIUS, TARGET_HEIGHT / 2,
                             0 * deg, 360. * deg);
-
-  G4NistManager *manager = G4NistManager::Instance();
-  G4Material *lead = manager->FindOrBuildMaterial("G4_Pb");
-  G4Material *NaI = manager->FindOrBuildMaterial("G4_SODIUM_IODIDE");
-  G4Material *air = manager->FindOrBuildMaterial("G4_AIR");
-  G4Material *sc = manager->FindOrBuildMaterial("G4_PLASTIC_SC_VINYLTOLUENE");
-  G4Material *plastic = manager->FindOrBuildMaterial("G4_POLYETHYLENE");
 
   logicalTarget_ = new G4LogicalVolume(solidTarget_,
                                        targetMaterial_,

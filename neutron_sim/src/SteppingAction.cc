@@ -11,6 +11,7 @@
 #include "G4Gamma.hh"
 #include "G4OpticalPhoton.hh"
 #include "G4VProcess.hh"
+#include "G4Proton.hh"
 
 SteppingAction::SteppingAction(EventAction *eventAction) : eventAction_(eventAction)
 {
@@ -87,14 +88,23 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
    *
    */
 
-  // const std::vector<const G4Track *> *secondaries = step->GetSecondaryInCurrentStep();
-  // if (!secondaries->empty())
-  // {
-  //   G4cout << "Secondaries in this step:" << G4endl;
-  //   for (const auto &secondary : *secondaries)
-  //   {
-  //     G4String name = secondary->GetDefinition()->GetParticleName();
-  //     G4cout << "  - " << name << G4endl;
-  //   }
-  // }
+  const std::vector<const G4Track *> *secondaries = step->GetSecondaryInCurrentStep();
+  auto analysisManager = G4AnalysisManager::Instance();
+  if (!secondaries->empty())
+  {
+    for (const auto &secondary : *secondaries)
+    {
+      if (secondary->GetDefinition() == G4Proton::ProtonDefinition())
+      {
+        G4String processName = secondary->GetCreatorProcess()->GetProcessName();
+        if (processName == "hadElastic")
+        {
+          G4double e = secondary->GetKineticEnergy();
+          // analysisManager->FillH1(0, e);
+          G4double le = 0.62 * e - 1.3 * (1 - std::exp(-0.39 * std::pow(e, 0.97)));
+          eventAction_->AddLightOutput(le);
+        }
+      }
+    }
+  }
 }

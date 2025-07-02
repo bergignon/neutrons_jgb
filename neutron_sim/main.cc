@@ -27,10 +27,8 @@ int main(int argc, char **argv)
   CLHEP::HepRandom::setTheSeed(seed);
   G4Random::setTheSeed(seed);
 
-  // #ifdef G4MULTITHREADED
   auto runManager = new G4MTRunManager();
   runManager->SetNumberOfThreads(G4Threading::G4GetNumberOfCores());
-  // / #else
 
   // auto runManager = new G4RunManager();
 
