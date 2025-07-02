@@ -99,10 +99,9 @@ void SteppingAction::UserSteppingAction(const G4Step *step)
         G4String processName = secondary->GetCreatorProcess()->GetProcessName();
         if (processName == "hadElastic")
         {
-          G4double e = secondary->GetKineticEnergy();
-          // analysisManager->FillH1(0, e);
-          G4double le = 0.62 * e - 1.3 * (1 - std::exp(-0.39 * std::pow(e, 0.97)));
-          eventAction_->AddLightOutput(le);
+          G4double protonEnergy = secondary->GetKineticEnergy();
+          G4double lightEnergy = (0.62 * protonEnergy) - (1.3 * (1 - std::exp(-0.39 * std::pow(protonEnergy, 0.97))));
+          eventAction_->AddLightOutput(lightEnergy);
         }
       }
     }
