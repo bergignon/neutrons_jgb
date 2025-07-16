@@ -20,9 +20,10 @@ void RunAction::BeginOfRunAction(const G4Run *run)
 {
     auto analysisManager = G4AnalysisManager::Instance();
     analysisManager->OpenFile("output.csv");
+    // analysisManager->CreateH1("EDEP", "Energy deposited by gammas", 1000, 0, 700 * keV);
     // analysisManager->CreateH1("nd" + to_string(run->GetRunID()), "Energy deposited by neutrons (%)", 1000, 0, 150);
     // analysisManager->CreateH1("pe", "Energy of secondary protons", 300, 0, 1 * MeV);
-    analysisManager->CreateH1("lo" + to_string(run->GetRunID()), "Light output", 1000, 0, 12 * MeV);
+    analysisManager->CreateH1("lo" + to_string(run->GetRunID()), "Light output", 1000, 0, 2 * MeV);
 }
 
 void RunAction::EndOfRunAction(const G4Run *run)

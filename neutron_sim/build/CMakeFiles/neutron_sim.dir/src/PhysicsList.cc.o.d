@@ -1176,7 +1176,5 @@ CMakeFiles/neutron_sim.dir/src/PhysicsList.cc.o: \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC_ALLHP.hh \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC_HP.hh \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BIC.hh \
-  /usr/local/include/Geant4/G4OpticalPhysics.hh \
-  /usr/local/include/Geant4/G4OpticalParameters.hh \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BERT_HP.hh \
   /usr/local/include/Geant4/G4HadronPhysicsQGSP_BERT.hh
