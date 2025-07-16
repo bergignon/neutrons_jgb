@@ -6581,9 +6581,7 @@ CMakeFiles/neutron_sim.dir/src/PhysicsList.cc.o: /Users/jeangabrielbergeron/Docu
   /usr/local/include/Geant4/G4OmegaMinus.hh \
   /usr/local/include/Geant4/G4OmegabMinus.hh \
   /usr/local/include/Geant4/G4OmegacZero.hh \
-  /usr/local/include/Geant4/G4OpticalParameters.hh \
   /usr/local/include/Geant4/G4OpticalPhoton.hh \
-  /usr/local/include/Geant4/G4OpticalPhysics.hh \
   /usr/local/include/Geant4/G4OrderedTable.hh \
   /usr/local/include/Geant4/G4PDefManager.hh \
   /usr/local/include/Geant4/G4ParticleChange.hh \
@@ -9883,7 +9881,6 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
   /usr/local/include/Geant4/G4NormalNavigation.icc \
   /usr/local/include/Geant4/G4NtupleBookingManager.hh \
   /usr/local/include/Geant4/G4NtupleBookingManager.icc \
-  /usr/local/include/Geant4/G4OpticalPhoton.hh \
   /usr/local/include/Geant4/G4OrderedTable.hh \
   /usr/local/include/Geant4/G4PDefManager.hh \
   /usr/local/include/Geant4/G4PVPlacement.hh \
@@ -10094,8 +10091,6 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
 /usr/local/include/Geant4/G4PionPlus.hh:
 
 /usr/local/include/Geant4/G4ParticleChangeForDecay.hh:
-
-/usr/local/include/Geant4/G4OpticalPhysics.hh:
 
 /usr/local/include/Geant4/G4OpticalPhoton.hh:
 
@@ -11814,8 +11809,6 @@ CMakeFiles/neutron_sim.dir/src/SteppingAction.cc.o: /Users/jeangabrielbergeron/D
 /usr/local/include/Geant4/G4PhysicsTable.icc:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/concepts:
-
-/usr/local/include/Geant4/G4OpticalParameters.hh:
 
 /usr/local/include/Geant4/G4Orb.icc:
 

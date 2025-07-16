@@ -10,7 +10,6 @@
 #include "G4HadronElasticPhysicsHP.hh"
 #include "G4HadronPhysicsQGSP_BIC_ALLHP.hh"
 #include "G4HadronPhysicsQGSP_BIC_HP.hh"
-#include "G4OpticalPhysics.hh"
 #include "G4HadronPhysicsQGSP_BERT_HP.hh"
 
 PhysicsList::PhysicsList() : G4VModularPhysicsList()
@@ -30,6 +29,7 @@ PhysicsList::PhysicsList() : G4VModularPhysicsList()
 
     // Hadron Physics
     RegisterPhysics(new G4HadronPhysicsQGSP_BIC_AllHP(0));
+    // RegisterPhysics(new G4HadronPhysicsQGSP_BIC_HP(0));
     // RegisterPhysics(new G4HadronPhysicsQGSP_BERT_HP(0));
 
     // Stopping Physics
@@ -38,8 +38,6 @@ PhysicsList::PhysicsList() : G4VModularPhysicsList()
     // Ion Physics
     RegisterPhysics(new G4IonElasticPhysics(0));
     RegisterPhysics(new G4IonPhysics(0));
-
-    // RegisterPhysics(new G4OpticalPhysics(0));
 }
 
 PhysicsList::~PhysicsList() {}
